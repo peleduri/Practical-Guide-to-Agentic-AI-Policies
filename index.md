@@ -12,6 +12,7 @@ The catalog of this wiki. Each page: one link, one-line summary.
 - [Part 6 — The Agent Extension Supply Chain](wiki/part-6-extension-supply-chain.md) — governing skills, plugins, commands, hooks, and subagents as a software supply chain loaded into the agent.
 - [Part 7 — Agentic Workflow Platforms (n8n, Gemini Enterprise)](wiki/part-7-agentic-workflow-platforms.md) — securing platforms where agentic workflows are wired into enterprise data; the SaaS-vs-self-hosted decision, the connector layer, and shipping workflows as code with an AI security-review gate.
 - [Part 8 — Enterprise Work AI and the DSPM Prerequisite (Glean and peers)](wiki/part-8-work-ai-and-dspm.md) — why permission-aware Work AI is dangerous because it mirrors overshared permissions, and why DSPM (what sensitive data exists + who can reach it) is the non-optional companion.
+- [Part 9 — Detection, Monitoring, and Incident Response for Agents](wiki/part-9-detection-monitoring-ir.md) — the operational other half: what to log (the causal chain), agent behavioral IOCs, a fail-safe kill switch, agent forensics, and the AI-native SOC.
 
 ## Key concepts (where they're defined)
 
@@ -42,6 +43,9 @@ The catalog of this wiki. Each page: one link, one-line summary.
 - Enterprise Work AI (Glean and peers) — permission-aware is not safe → Part 8
 - Oversharing / access sprawl surfaced by natural language → Part 8
 - DSPM as the prerequisite: what sensitive data exists + who can reach it → Part 8
+- Agent audit trail: log the causal chain, not just the action → Part 9
+- Behavioral IOCs + the fail-safe kill switch + agent forensics → Part 9
+- AI-native / context-graph SOC; watching agents with an agent → Part 9
 
 ## Sources
 

@@ -14,6 +14,7 @@ It is organized as an **LLM Wiki** (following [Andrej Karpathy's pattern](https:
 6. **[Part 6 — The Agent Extension Supply Chain](wiki/part-6-extension-supply-chain.md)** — governing the skills, plugins, commands, hooks, and subagents you load into an agent as a reviewed software supply chain, not a convenience.
 7. **[Part 7 — Agentic Workflow Platforms (n8n, Gemini Enterprise)](wiki/part-7-agentic-workflow-platforms.md)** — securing the automation and agent platforms wired into enterprise data: the SaaS-vs-self-hosted (and license-tier) decision, arbitrary-code and connector risk, the credential concentration, and shipping workflows as code (GitOps + AI security-review gate) with external secrets and the AI gateway for model calls.
 8. **[Part 8 — Enterprise Work AI and the DSPM Prerequisite (Glean and peers)](wiki/part-8-work-ai-and-dspm.md)** — why a permission-aware Work AI platform is dangerous precisely because it faithfully mirrors overshared permissions, and why DSPM is the non-optional companion for knowing what sensitive data exists and who can reach it.
+9. **[Part 9 — Detection, Monitoring, and Incident Response for Agents](wiki/part-9-detection-monitoring-ir.md)** — the operational other half of the guide: log the causal chain (not just the action), detect on agent behavioral IOCs, pre-build a fail-safe kill switch, do agent forensics, and use an AI-native SOC (governed by this same guide).
 
 ## Who it's for
 
