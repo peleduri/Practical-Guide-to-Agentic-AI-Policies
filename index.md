@@ -13,6 +13,7 @@ The catalog of this wiki. Each page: one link, one-line summary.
 - [Part 7 — Agentic Workflow Platforms (n8n, Gemini Enterprise)](wiki/part-7-agentic-workflow-platforms.md) — securing platforms where agentic workflows are wired into enterprise data; the SaaS-vs-self-hosted decision, the connector layer, and shipping workflows as code with an AI security-review gate.
 - [Part 8 — Enterprise Work AI and the DSPM Prerequisite (Glean and peers)](wiki/part-8-work-ai-and-dspm.md) — why permission-aware Work AI is dangerous because it mirrors overshared permissions, and why DSPM (what sensitive data exists + who can reach it) is the non-optional companion.
 - [Part 9 — Detection, Monitoring, and Incident Response for Agents](wiki/part-9-detection-monitoring-ir.md) — the operational other half: what to log (the causal chain), agent behavioral IOCs, a fail-safe kill switch, agent forensics, and the AI-native SOC.
+- [Part 10 — Agent Identity and Non-Human Identity (NHI)](wiki/part-10-agent-identity.md) — the identity spine: delegation vs impersonation, ephemeral/just-in-time task-scoped access, intent-based access, and NHI lifecycle governance.
 
 ## Key concepts (where they're defined)
 
@@ -46,6 +47,9 @@ The catalog of this wiki. Each page: one link, one-line summary.
 - Agent audit trail: log the causal chain, not just the action → Part 9
 - Behavioral IOCs + the fail-safe kill switch + agent forensics → Part 9
 - AI-native / context-graph SOC; watching agents with an agent → Part 9
+- Agent / non-human identity (NHI); delegation vs impersonation → Part 10
+- Ephemeral / just-in-time task-scoped access; no standing privilege → Part 10
+- Intent-based access (declared task = permission boundary); NHI lifecycle → Part 10
 
 ## Sources
 
