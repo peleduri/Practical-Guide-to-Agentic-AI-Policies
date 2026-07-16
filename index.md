@@ -1,8 +1,8 @@
 # Index
 
-The catalog of this wiki. Each page: one link, one-line summary.
+The catalog of this wiki. Each page: one link, one-line summary. New here? Start with [`start-here.md`](start-here.md) for reader tracks and the first five controls. Term definitions live in [`glossary.md`](glossary.md).
 
-## Guide (four parts)
+## Guide (ten parts)
 
 - [Part 1 — The Risk Surface and Control Model](wiki/part-1-risk-surface-and-control-model.md) — why agentic AI is a new security surface; the risk model; the discovery + enforcement two-layer model.
 - [Part 2 — Endpoint Hardening and Policy Playbook](wiki/part-2-endpoint-hardening-and-policy-playbook.md) — tool-call and MCP controls, data-aware rules, managed-settings baselines for Claude Code / Codex / Cursor, a real PreToolUse hook example, and Claude Cowork controls.
@@ -16,6 +16,8 @@ The catalog of this wiki. Each page: one link, one-line summary.
 - [Part 10 — Agent Identity and Non-Human Identity (NHI)](wiki/part-10-agent-identity.md) — the identity spine: delegation vs impersonation, ephemeral/just-in-time task-scoped access, intent-based access, and NHI lifecycle governance.
 
 ## Key concepts (where they're defined)
+
+One-line pointers to the part that defines each. For the definitions themselves, see [`glossary.md`](glossary.md).
 
 - Discovery + enforcement (two-layer model) → Part 1
 - Prompt / pre-tool / post-tool interception; allow / ask / deny → Part 1, Part 2

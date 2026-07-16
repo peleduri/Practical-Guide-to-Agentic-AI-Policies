@@ -61,6 +61,10 @@ Controls from the earlier parts must be ported to this new compute boundary:
 
 Shifting agent compute to specialized providers improves isolation through ephemeral microVMs, but the security gain is illusory if the foundational layers of IAM, audit, and egress control are not re-established. Assess these providers with the same rigor as any vendor holding your source code and secrets, and prioritize the self-hosted-sandbox worker model to keep execution and data inside a boundary you control while still leveraging high-performance agentic compute.
 
-## Source
+## Sources
 
 - https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes
+
+---
+
+Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · Next → **[Part 5 — Personal, Always-On AI Assistants](part-5-personal-always-on-assistants.md)**

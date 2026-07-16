@@ -68,4 +68,4 @@ The security of agentic AI coding assistants is an endpoint problem. While produ
 
 ---
 
-Next: **[Part 2 — Endpoint Hardening and Policy Playbook](part-2-endpoint-hardening-and-policy-playbook.md)** turns this model into concrete controls.
+Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · Next → **[Part 2 — Endpoint Hardening and Policy Playbook](part-2-endpoint-hardening-and-policy-playbook.md)**

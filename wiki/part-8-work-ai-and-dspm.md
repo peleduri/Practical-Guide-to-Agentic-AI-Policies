@@ -51,3 +51,7 @@ An enterprise Work AI platform is a faithful mirror of your permissions — whic
 - https://www.knostic.ai/blog/glean-data-security
 - https://learn.microsoft.com/en-us/purview/data-security-posture-management-learn-about
 - https://securiti.ai/what-is-dspm/
+
+---
+
+Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · Next → **[Part 9 — Detection, Monitoring, and Incident Response for Agents](part-9-detection-monitoring-ir.md)**

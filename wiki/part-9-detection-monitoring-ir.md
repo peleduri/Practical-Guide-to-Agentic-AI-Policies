@@ -79,3 +79,7 @@ Prevention without detection and response is half a security program. For agents
 - https://www.miniorange.com/blog/ai-kill-switch-architecture/
 - https://rafter.so/blog/ai-agent-incident-response-playbook
 - https://techjacksolutions.com/ai/agentic-ai/secure/agent-incident-response/
+
+---
+
+Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · Next → **[Part 10 — Agent Identity and Non-Human Identity](part-10-agent-identity.md)**

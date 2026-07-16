@@ -48,3 +48,7 @@ Identity is the spine of everything in this guide. Give each agent its own ident
 - https://learn.microsoft.com/en-us/entra/agent-id/identity-platform/agent-user-oauth-flow
 - https://www.paloaltonetworks.com/cyberpedia/what-is-a-non-human-identity
 - https://www.apono.io/
+
+---
+
+Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · **[Start Here](../start-here.md)** · _Part 10 is the final part._

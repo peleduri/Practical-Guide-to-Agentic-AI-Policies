@@ -49,3 +49,7 @@ The extension layer is code and instructions you did not write, running inside y
 - https://www.sentinelone.com/blog/marketplace-skills-and-dependency-hijack-in-claude-code/
 - https://www.promptarmor.com/resources/hijacking-claude-code-via-injected-marketplace-plugins
 - https://www.agensi.io/learn/are-ai-agent-skills-safe-security-risks
+
+---
+
+Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · Next → **[Part 7 — Agentic Workflow Platforms](part-7-agentic-workflow-platforms.md)**
