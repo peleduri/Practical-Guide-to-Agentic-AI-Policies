@@ -12,6 +12,8 @@ It is organized as an **LLM Wiki** (following [Andrej Karpathy's pattern](https:
 4. **[Part 4 — Beyond the Hyperscalers](wiki/part-4-beyond-the-hyperscalers.md)** — re-onboarding mature cloud security controls onto GPU-first neoclouds and sandbox-native providers, and the self-hosted-sandbox model as the control lever.
 5. **[Part 5 — Personal, Always-On AI Assistants](wiki/part-5-personal-always-on-assistants.md)** — securing the OpenClaw / NanoClaw class: autonomous, messaging-connected, self-scheduling assistants that act without a prompt and answer to anyone who can message them.
 6. **[Part 6 — The Agent Extension Supply Chain](wiki/part-6-extension-supply-chain.md)** — governing the skills, plugins, commands, hooks, and subagents you load into an agent as a reviewed software supply chain, not a convenience.
+7. **[Part 7 — Agentic Workflow Platforms (n8n, Gemini Enterprise)](wiki/part-7-agentic-workflow-platforms.md)** — securing the automation and agent platforms wired into enterprise data: the SaaS-vs-self-hosted (and license-tier) decision, arbitrary-code and connector risk, the credential concentration, and shipping workflows as code (GitOps + AI security-review gate) with external secrets and the AI gateway for model calls.
+8. **[Part 8 — Enterprise Work AI and the DSPM Prerequisite (Glean and peers)](wiki/part-8-work-ai-and-dspm.md)** — why a permission-aware Work AI platform is dangerous precisely because it faithfully mirrors overshared permissions, and why DSPM is the non-optional companion for knowing what sensitive data exists and who can reach it.
 
 ## Who it's for
 
