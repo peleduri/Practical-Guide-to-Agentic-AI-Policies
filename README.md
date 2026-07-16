@@ -10,6 +10,8 @@ It is organized as an **LLM Wiki** (following [Andrej Karpathy's pattern](https:
 2. **[Part 2 — Endpoint Hardening and Policy Playbook](wiki/part-2-endpoint-hardening-and-policy-playbook.md)** — tool-call and MCP controls, data-aware rules, managed-settings baselines for Claude Code / Codex / Cursor, a real PreToolUse hook that guards GitHub Enterprise admin, and Claude Cowork controls.
 3. **[Part 3 — Architecture, Gateways, and Remote Defense](wiki/part-3-architecture-gateways-and-remote-defense.md)** — the MCP broker model, IP allowlisting vs device trust, and defending remote/cloud development environments.
 4. **[Part 4 — Beyond the Hyperscalers](wiki/part-4-beyond-the-hyperscalers.md)** — re-onboarding mature cloud security controls onto GPU-first neoclouds and sandbox-native providers, and the self-hosted-sandbox model as the control lever.
+5. **[Part 5 — Personal, Always-On AI Assistants](wiki/part-5-personal-always-on-assistants.md)** — securing the OpenClaw / NanoClaw class: autonomous, messaging-connected, self-scheduling assistants that act without a prompt and answer to anyone who can message them.
+6. **[Part 6 — The Agent Extension Supply Chain](wiki/part-6-extension-supply-chain.md)** — governing the skills, plugins, commands, hooks, and subagents you load into an agent as a reviewed software supply chain, not a convenience.
 
 ## Who it's for
 

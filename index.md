@@ -8,6 +8,8 @@ The catalog of this wiki. Each page: one link, one-line summary.
 - [Part 2 — Endpoint Hardening and Policy Playbook](wiki/part-2-endpoint-hardening-and-policy-playbook.md) — tool-call and MCP controls, data-aware rules, managed-settings baselines for Claude Code / Codex / Cursor, a real PreToolUse hook example, and Claude Cowork controls.
 - [Part 3 — Architecture, Gateways, and Remote Defense](wiki/part-3-architecture-gateways-and-remote-defense.md) — the MCP broker model, IP allowlisting vs device trust, and defending remote/cloud dev environments.
 - [Part 4 — Beyond the Hyperscalers](wiki/part-4-beyond-the-hyperscalers.md) — re-onboarding cloud controls on GPU-first neoclouds and sandbox-native providers; the self-hosted-sandbox model.
+- [Part 5 — Personal, Always-On AI Assistants (OpenClaw / NanoClaw class)](wiki/part-5-personal-always-on-assistants.md) — securing autonomous, messaging-connected, self-scheduling personal assistants; the risks the coding-agent parts miss.
+- [Part 6 — The Agent Extension Supply Chain](wiki/part-6-extension-supply-chain.md) — governing skills, plugins, commands, hooks, and subagents as a software supply chain loaded into the agent.
 
 ## Key concepts (where they're defined)
 
@@ -21,6 +23,15 @@ The catalog of this wiki. Each page: one link, one-line summary.
 - Remote / cloud workspace defense (template-baked config) → Part 3
 - Self-hosted sandbox / environment worker → Part 4
 - GPU-first neoclouds vs sandbox-native providers → Part 4
+- Personal always-on assistants (OpenClaw / NanoClaw class) → Part 5
+- Autonomy at trigger time (heartbeat / no human prompt) → Part 5
+- Messaging-channel governance (injection + exfil surface) → Part 5
+- Container isolation + credential vault (OpenClaw vs NanoClaw) → Part 5
+- `before_tool_call` guard hooks + the judge-LLM caution → Part 5
+- Extension supply chain (skills / plugins / commands / hooks / subagents) → Part 6
+- Managed-only hooks + permission rules; marketplace provenance & pinning → Part 6
+- Instruction packs as executable trust (SKILL.md scanning) → Part 6
+- Internal skills registry / artifact repository (Artifactory-style, pull-only) → Part 6
 
 ## Sources
 
