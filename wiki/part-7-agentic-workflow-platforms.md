@@ -78,3 +78,7 @@ Agentic workflow platforms move the risk from the developer's machine to a centr
 - https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview
 - https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern
 - https://beyondscale.tech/blog/google-gemini-enterprise-security
+
+---
+
+Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · Next → **[Part 8 — Enterprise Work AI and the DSPM Prerequisite](part-8-work-ai-and-dspm.md)**

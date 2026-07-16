@@ -2,7 +2,7 @@
 
 A security engineer's playbook for defending **agentic AI coding assistants** — Claude Code, Claude Cowork, Codex, Cursor and peers — across developer laptops, remote/cloud development environments, and the new tier of GPU-first and sandbox-native compute providers.
 
-It is organized as an **LLM Wiki** (following [Andrej Karpathy's pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)): a compounding, cross-referenced set of markdown pages that both humans and LLMs can read, extend, and maintain. Start at [`index.md`](index.md); the structure and conventions are described in [`CLAUDE.md`](CLAUDE.md); change history is in [`log.md`](log.md).
+It is organized as an **LLM Wiki** (following [Andrej Karpathy's pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)): a compounding, cross-referenced set of markdown pages that both humans and LLMs can read, extend, and maintain. **New readers should start at [`start-here.md`](start-here.md)** — it carries reader tracks (security engineer / platform-DevEx / CISO), the first five controls in order, and a crawl/walk/run maturity model. The full catalog is [`index.md`](index.md); term definitions are in [`glossary.md`](glossary.md); the structure and conventions are described in [`CLAUDE.md`](CLAUDE.md); change history is in [`log.md`](log.md).
 
 ## The guide
 

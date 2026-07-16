@@ -55,4 +55,4 @@ When the agent already runs in a cloud workspace with cluster/cloud access, driv
 
 ---
 
-Next: **[Part 4 — Beyond the Hyperscalers](part-4-beyond-the-hyperscalers.md)** extends this to GPU-first and sandbox-native compute providers.
+Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · Next → **[Part 4 — Beyond the Hyperscalers](part-4-beyond-the-hyperscalers.md)**

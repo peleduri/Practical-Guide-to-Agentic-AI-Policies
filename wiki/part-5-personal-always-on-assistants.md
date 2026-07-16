@@ -62,3 +62,7 @@ Personal always-on assistants take the coding-agent risk surface, remove the hum
 - https://clawguard.io/
 - https://github.com/knostic/openclaw-shield
 - https://www.nvidia.com/en-us/ai/nemoclaw/
+
+---
+
+Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · Next → **[Part 6 — The Agent Extension Supply Chain](part-6-extension-supply-chain.md)**

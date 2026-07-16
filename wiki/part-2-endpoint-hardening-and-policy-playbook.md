@@ -144,3 +144,7 @@ Start with the two execution paths, because their risk is not the same:
 
 - https://support.claude.com/en/articles/13364135-use-claude-cowork-safely
 - https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans
+
+---
+
+Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · Next → **[Part 3 — Architecture, Gateways, and Remote Defense](part-3-architecture-gateways-and-remote-defense.md)**

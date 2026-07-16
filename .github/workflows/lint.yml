@@ -1,0 +1,35 @@
+name: wiki-lint
+
+# Least privilege: this workflow only reads the repo. The GITHUB_TOKEN is
+# granted no write scopes, so a compromised step cannot push, comment, or
+# alter the repo. (This is the Part 6 / Part 10 principle applied to our own CI.)
+permissions:
+  contents: read
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    # `pull_request` (NOT `pull_request_target`): a PR from a fork runs with a
+    # read-only token and NO access to repo secrets, so a malicious PR cannot
+    # exfiltrate anything or gain write access. Never switch this to
+    # pull_request_target for a public repo without a hard reason.
+
+# Cancel superseded runs on the same ref so a force-push doesn't pile up jobs.
+concurrency:
+  group: wiki-lint-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      # Pin to a full commit SHA, not a moving tag: a tag can be repointed at
+      # malicious code (tag-hijack supply-chain attack); a SHA cannot.
+      # Pinned to actions/checkout v4.2.2.
+      - name: Check out the wiki
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false   # don't leave the token in .git/config
+      - name: Lint links and orphans
+        run: bash scripts/lint.sh
