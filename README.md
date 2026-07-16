@@ -1,8 +1,18 @@
 # Practical Guide to Agentic AI Policies
 
+[![lint](https://github.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/actions/workflows/lint.yml/badge.svg)](https://github.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/actions/workflows/lint.yml) [![docs: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-blue.svg)](LICENSE) [![code: MIT](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE-CODE)
+
+**Defend AI coding agents — Claude Code, Cowork, Codex, Cursor — and the wider agentic stack across laptops, remote workspaces, and GPU/sandbox clouds.** Ten cross-referenced parts, from the risk model to endpoint hardening, detection, and agent identity. For security engineers, platform / developer-experience teams, and CISOs. → **New here? [Start here](start-here.md).**
+
 A security engineer's playbook for defending **agentic AI coding assistants** — Claude Code, Claude Cowork, Codex, Cursor and peers — across developer laptops, remote/cloud development environments, and the new tier of GPU-first and sandbox-native compute providers.
 
 It is organized as an **LLM Wiki** (following [Andrej Karpathy's pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)): a compounding, cross-referenced set of markdown pages that both humans and LLMs can read, extend, and maintain. **New readers should start at [`start-here.md`](start-here.md)** — it carries reader tracks (security engineer / platform-DevEx / CISO), the first five controls in order, and a crawl/walk/run maturity model. The full catalog is [`index.md`](index.md); term definitions are in [`glossary.md`](glossary.md); the structure and conventions are described in [`CLAUDE.md`](CLAUDE.md); change history is in [`log.md`](log.md).
+
+## Use this guide
+
+- **Browse it as a site.** The wiki is published with GitHub Pages — the link is in the repository's About panel.
+- **Point your agent at it.** This is an LLM Wiki, meant to be pulled by an agent as a policy source. Machine index: [`llms.txt`](llms.txt). Every page is plain Markdown at a stable raw URL, e.g. `https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-2-endpoint-hardening-and-policy-playbook.md`.
+- **Lift the controls.** The configs, the PreToolUse hook, and the CI lint are meant to be copied — see each part and `scripts/`.
 
 ## The guide
 
@@ -26,3 +36,17 @@ Security engineers, platform / developer-experience teams, and CISOs standing up
 - Vendor and product names are **examples, not endorsements**. Agent controls change quickly — verify against the vendor docs cited on each page before relying on a specific setting.
 - This is a general playbook; nothing here is specific to any one organization.
 - Living document. See [`log.md`](log.md) for history.
+
+## Roadmap
+
+Planned, not yet written — issues and contributions welcome:
+
+- **Part 11 — Governance & Compliance** — mapping the controls to NIST AI RMF, ISO 42001, the EU AI Act, the OWASP LLM Top 10, and MITRE ATLAS.
+- **A `templates/` tree** — copy-ready detection rules, policy snippets, and config baselines as files, not just inline examples.
+- **A DevEx rollout part** — staged pilot, break-glass / exceptions, and the guardrail-vs-velocity tradeoff.
+- **Site search** — a docs theme with full-text search across all parts.
+
+## License
+
+- **Documentation** (all prose and diagrams): [Creative Commons Attribution 4.0 International](LICENSE) (CC BY 4.0) — share and adapt freely, with credit.
+- **Code** (`scripts/`, `.github/`, and the config / hook snippets): [MIT](LICENSE-CODE).

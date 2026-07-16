@@ -1,0 +1,29 @@
+# Practical Guide to Agentic AI Policies
+
+> A security engineer's playbook for defending agentic AI coding assistants (Claude Code, Cowork, Codex, Cursor) and the wider agentic stack — across developer laptops, remote/cloud workspaces, and GPU-first / sandbox-native compute. Structured as an LLM Wiki: cross-referenced Markdown meant to be read by a human or pulled by an agent as a policy source.
+
+Every link below is plain Markdown at a stable raw URL on the `main` branch. Read `start-here.md` first (reader tracks + the first five controls), then the parts in order. Definitions are in the glossary.
+
+## Start
+
+- [Start Here](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/start-here.md): reader tracks (security engineer / platform-DevEx / CISO), the first five controls in order, and a crawl/walk/run maturity model
+- [Index](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/index.md): the full catalog and where each key concept is defined
+- [Glossary](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/glossary.md): one-line definitions of the cross-cutting terms
+
+## The guide
+
+- [Part 1 — The Risk Surface and Control Model](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-1-risk-surface-and-control-model.md): why an agent that acts is a new security problem; the risk model; the discovery + enforcement two-layer defense
+- [Part 2 — Endpoint Hardening and Policy Playbook](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-2-endpoint-hardening-and-policy-playbook.md): tool-call and MCP controls, managed-settings baselines (Claude Code / Codex / Cursor), a real PreToolUse hook, and Claude Cowork controls
+- [Part 3 — Architecture, Gateways, and Remote Defense](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-3-architecture-gateways-and-remote-defense.md): the MCP broker model, IP allowlisting vs device trust, and defending remote/cloud dev environments
+- [Part 4 — Beyond the Hyperscalers](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-4-beyond-the-hyperscalers.md): re-onboarding cloud security controls onto GPU-first neoclouds and sandbox-native providers; the self-hosted-sandbox model
+- [Part 5 — Personal, Always-On AI Assistants](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-5-personal-always-on-assistants.md): securing autonomous, messaging-connected, self-scheduling personal assistants
+- [Part 6 — The Agent Extension Supply Chain](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-6-extension-supply-chain.md): governing skills, plugins, commands, hooks, and subagents as a reviewed software supply chain
+- [Part 7 — Agentic Workflow Platforms](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-7-agentic-workflow-platforms.md): securing n8n and Gemini Enterprise; the SaaS-vs-self-hosted decision, the connector layer, workflows as code with an AI review gate
+- [Part 8 — Enterprise Work AI and the DSPM Prerequisite](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-8-work-ai-and-dspm.md): why permission-aware Work AI mirrors overshared permissions, and why DSPM is the non-optional companion
+- [Part 9 — Detection, Monitoring, and Incident Response](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-9-detection-monitoring-ir.md): log the causal chain, agent behavioral IOCs, a fail-safe kill switch, agent forensics, and the AI-native SOC
+- [Part 10 — Agent Identity and Non-Human Identity](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-10-agent-identity.md): delegation vs impersonation, ephemeral / just-in-time / task-scoped access, intent-based access, and NHI lifecycle
+
+## Meta
+
+- [Conventions and schema](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/CLAUDE.md): how the wiki is structured and how to extend it
+- [Change log](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/log.md): append-only history
