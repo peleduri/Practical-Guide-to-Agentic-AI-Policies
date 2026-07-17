@@ -36,6 +36,10 @@ The practical payoff: a delegated, per-agent token can be revoked on its own whe
 - **Kill secrets sprawl.** No hardcoded agent keys — broker credentials through a vault or gateway ([Part 3](part-3-architecture-gateways-and-remote-defense.md)/[Part 7](part-7-agentic-workflow-platforms.md)), prefer short-lived tokens over static ones, and scan repos and configs for leaked AI secrets.
 - **Make revocation per-agent and instant.** Because the agent has its own delegated identity, you can revoke it in isolation — the clean containment path when detection fires.
 
+## The Credential Boundary
+
+A stronger form of killing secrets sprawl: don't just vault the agent's credentials — put a broker between the agent and every downstream provider so the agent **never holds the secret at all**. The agent authenticates to the broker; the broker keeps the provider keys and OAuth tokens behind its runtime boundary and hands back only metadata, safe account labels, and results. A compromised or prompt-injected agent cannot exfiltrate a credential it was never given, so the [Part 1](part-1-risk-surface-and-control-model.md) attack path dead-ends: the secret is on the far side of the boundary. Because the broker mediates every call, it is also the natural place to enforce per-connection identity, scopes, and action policies and to log each run (the audit trail of [Part 9](part-9-detection-monitoring-ir.md)). This is the [Part 3](part-3-architecture-gateways-and-remote-defense.md) MCP broker extended from tools to identity — one chokepoint that brokers both *what* the agent may call and *as whom*. OpenConnector is an open-source implementation of the pattern: agents reach many SaaS providers through it via SDK, CLI, MCP, or HTTP, and the provider secrets stay behind the boundary. A wiring sketch is in [`templates/identity/credential-broker.md`](../templates/identity/credential-broker.md).
+
 ## Bottom Line
 
 Identity is the spine of everything in this guide. Give each agent its own identity and prefer delegation over impersonation so every action is accountable as *agent-acting-for-user-under-a-grant*; make access ephemeral, just-in-time, and task-scoped with no standing privilege; validate the agent's actual actions against its declared intent; kill the secrets sprawl; and govern the NHI lifecycle from creation to decommission. The field is minting agent identities at machine speed — the job is to give them least-privilege, short-lived, revocable identities before the standing-privilege sprawl becomes the breach.
@@ -48,6 +52,7 @@ Identity is the spine of everything in this guide. Give each agent its own ident
 - https://learn.microsoft.com/en-us/entra/agent-id/identity-platform/agent-user-oauth-flow
 - https://www.paloaltonetworks.com/cyberpedia/what-is-a-non-human-identity
 - https://www.apono.io/
+- https://github.com/oomol-lab/open-connector
 
 ---
 
