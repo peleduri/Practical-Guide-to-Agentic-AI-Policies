@@ -56,11 +56,16 @@ Terms the guide leans on, defined once. The link points to the part where the te
 
 - **Kill switch (fail-safe)** — a pre-built, tested containment lever (per-agent and per-fleet) that halts the agent, revokes its credentials, and cuts egress — designed to fail *safe* (graceful completion, state snapshot), not to cause more damage than the incident. → [Part 9](wiki/part-9-detection-monitoring-ir.md)
 
+## L
+
+- **Local inference (on-device model)** — running an open-weights model on the developer's own machine via a runtime like Ollama or LM Studio, so the model call never crosses the network. Feels private; bypasses the AI gateway and all its logging, screening, and allowlisting. → [Part 11](wiki/part-11-local-open-source-models.md)
+
 ## M
 
 - **Managed settings baseline** — a hardened configuration delivered by admins (MDM or root-owned config) that users cannot loosen: plan/ask default, bypass and auto modes disabled, sandbox enforced, managed-hooks-and-rules-only. → [Part 2](wiki/part-2-endpoint-hardening-and-policy-playbook.md)
 - **MCP (Model Context Protocol)** — the protocol agents use to reach external tool servers (databases, tickets, chat). Powerful and un-vetted by default, so it needs allowlisting and brokering. → [Part 1](wiki/part-1-risk-surface-and-control-model.md)
 - **MCP broker / trusted gateway** — a central, governed chokepoint through which all MCP tool access is routed, allow-listed, and logged, instead of each agent connecting to servers directly. → [Part 3](wiki/part-3-architecture-gateways-and-remote-defense.md)
+- **Model-file supply chain** — treating downloaded model weights as executable artifacts: pickle-format models run code on load (RCE), even "safe" formats like GGUF have carried payloads in metadata, and the loading runtime itself has had RCE CVEs. Allowlist sources, prefer safetensors, scan, and pin. → [Part 11](wiki/part-11-local-open-source-models.md)
 
 ## N
 
@@ -94,3 +99,7 @@ Terms the guide leans on, defined once. The link points to the part where the te
 
 - **Work AI platform** — an enterprise assistant (e.g. Glean) connected to org data. Permission-aware by design, which is exactly the risk: it mirrors overshared permissions into a natural-language interface. → [Part 8](wiki/part-8-work-ai-and-dspm.md)
 - **Workflows as code (GitOps + AI security-review gate)** — treating automations as version-controlled code that passes an AI-powered security review before it is published and connected to critical systems, rather than clicked together in a console. → [Part 7](wiki/part-7-agentic-workflow-platforms.md)
+
+## Y
+
+- **YOLO mode / auto-approve** — an agent setting that removes the human-in-the-loop by auto-approving actions; full "YOLO" disables every safety check (file deletion, system changes, and network calls included). Paired with a local model it produces a fully ungoverned autonomous loop. → [Part 11](wiki/part-11-local-open-source-models.md), [Part 2](wiki/part-2-endpoint-hardening-and-policy-playbook.md)
