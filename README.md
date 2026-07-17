@@ -10,7 +10,7 @@ It is organized as an **LLM Wiki** (following [Andrej Karpathy's pattern](https:
 
 ## Use this guide
 
-- **Browse it as a site.** The wiki is published with GitHub Pages — the link is in the repository's About panel.
+- **Browse it as a site.** The wiki is published with GitHub Pages at **https://peleduri.github.io/Practical-Guide-to-Agentic-AI-Policies/** (also in the About panel).
 - **Point your agent at it.** This is an LLM Wiki, meant to be pulled by an agent as a policy source. Machine index: [`llms.txt`](llms.txt). Every page is plain Markdown at a stable raw URL, e.g. `https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-2-endpoint-hardening-and-policy-playbook.md`.
 - **Lift the controls.** The configs, the PreToolUse hook, and the CI lint are meant to be copied — see each part and `scripts/`.
 
