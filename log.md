@@ -69,3 +69,7 @@ Design-review fix on the published Pages site (minima theme). Two findings fixed
 ## [2026-07-17] edit | Add author byline (LinkedIn)
 
 Added an "## Author" section to `README.md` crediting Uri Peled with a LinkedIn link, and an invitation for issues/PRs. Puts a real name and identity behind the guide (credibility for a security playbook) and gives the distribution effort an author to attribute.
+
+## [2026-07-17] edit | Name concrete AI-gateway examples (LiteLLM, Kong)
+
+The guide repeatedly says "route model calls through the AI gateway" (Parts 1/7/13) but named no concrete implementation of that chokepoint. Added two, as examples-not-endorsements, in the places the concept already lives: Part 7 (\"Route all LLM calls through the AI gateway\") now names **LiteLLM** (open-source OpenAI-compatible proxy — virtual-key budgets, model allowlist, logging, vault integration) and **Kong AI Gateway** (LLM extension of an API gateway — guardrails kept in-gateway: prompt/response screening, NeMo Guardrails, ai-prompt-guard, plus secret-manager key handling and RBAC/audit); the `glossary.md` AI-gateway term gets the same two as OSS/commercial examples. Hedged "verify against vendor docs." LangChain/LangGraph deliberately NOT added here — it is an orchestration framework, not a gateway, and is already slated as an orchestrator example in the planned Multi-Agent/A2A part. Updated `README.md` (Part 7 entry).
