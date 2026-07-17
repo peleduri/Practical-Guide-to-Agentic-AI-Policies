@@ -51,4 +51,4 @@ Identity is the spine of everything in this guide. Give each agent its own ident
 
 ---
 
-Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · **[Start Here](../start-here.md)** · _Part 10 is the final part._
+Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · Next → **[Part 11 — Local and Open-Source Models on the Endpoint](part-11-local-open-source-models.md)**

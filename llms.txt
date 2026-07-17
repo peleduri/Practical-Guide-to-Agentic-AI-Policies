@@ -22,6 +22,7 @@ Every link below is plain Markdown at a stable raw URL on the `main` branch. Rea
 - [Part 8 — Enterprise Work AI and the DSPM Prerequisite](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-8-work-ai-and-dspm.md): why permission-aware Work AI mirrors overshared permissions, and why DSPM is the non-optional companion
 - [Part 9 — Detection, Monitoring, and Incident Response](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-9-detection-monitoring-ir.md): log the causal chain, agent behavioral IOCs, a fail-safe kill switch, agent forensics, and the AI-native SOC
 - [Part 10 — Agent Identity and Non-Human Identity](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-10-agent-identity.md): delegation vs impersonation, ephemeral / just-in-time / task-scoped access, intent-based access, and NHI lifecycle
+- [Part 11 — Local and Open-Source Models on the Endpoint](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-11-local-open-source-models.md): why local inference (Cline + Ollama/LM Studio) bypasses the AI gateway, the model-file supply chain (pickle/GGUF RCE), the unauthenticated local server, YOLO/auto-approve, and the govern-don't-ban playbook
 
 ## Meta
 

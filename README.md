@@ -26,6 +26,7 @@ It is organized as an **LLM Wiki** (following [Andrej Karpathy's pattern](https:
 8. **[Part 8 — Enterprise Work AI and the DSPM Prerequisite (Glean and peers)](wiki/part-8-work-ai-and-dspm.md)** — why a permission-aware Work AI platform is dangerous precisely because it faithfully mirrors overshared permissions, and why DSPM is the non-optional companion for knowing what sensitive data exists and who can reach it.
 9. **[Part 9 — Detection, Monitoring, and Incident Response for Agents](wiki/part-9-detection-monitoring-ir.md)** — the operational other half of the guide: log the causal chain (not just the action), detect on agent behavioral IOCs, pre-build a fail-safe kill switch, do agent forensics, and use an AI-native SOC (governed by this same guide).
 10. **[Part 10 — Agent Identity and Non-Human Identity (NHI)](wiki/part-10-agent-identity.md)** — the identity spine the guide leaned on: give each agent its own identity and delegate (don't impersonate), make access ephemeral / just-in-time / task-scoped with no standing privilege, validate intent against action, and govern the NHI lifecycle.
+11. **[Part 11 — Local and Open-Source Models on the Endpoint (Cline, LM Studio, Ollama)](wiki/part-11-local-open-source-models.md)** — running open-weights models locally feels private and is therefore treated as safe; it is neither. It bypasses the AI gateway, the model file executes code on load, the local server is an unauthenticated socket, and the agent still acts — plus the govern-don't-ban playbook.
 
 ## Who it's for
 
@@ -41,7 +42,7 @@ Security engineers, platform / developer-experience teams, and CISOs standing up
 
 Planned, not yet written — issues and contributions welcome:
 
-- **Part 11 — Governance & Compliance** — mapping the controls to NIST AI RMF, ISO 42001, the EU AI Act, the OWASP LLM Top 10, and MITRE ATLAS.
+- **A Governance & Compliance part** — mapping the controls to NIST AI RMF, ISO 42001, the EU AI Act, the OWASP LLM Top 10, and MITRE ATLAS.
 - **A `templates/` tree** — copy-ready detection rules, policy snippets, and config baselines as files, not just inline examples.
 - **A DevEx rollout part** — staged pilot, break-glass / exceptions, and the guardrail-vs-velocity tradeoff.
 - **Site search** — a docs theme with full-text search across all parts.
