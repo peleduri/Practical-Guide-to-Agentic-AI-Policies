@@ -97,4 +97,4 @@ The frameworks do not replace the controls in this guide; they are the languages
 
 ---
 
-Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · **[Start Here](../start-here.md)** · _Part 12 is the final part._
+Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · Next → **[Part 13 — The Managed Cloud AI Stack](part-13-managed-cloud-ai-stack.md)**

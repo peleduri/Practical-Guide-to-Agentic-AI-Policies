@@ -68,6 +68,7 @@ Terms the guide leans on, defined once. The link points to the part where the te
 
 ## M
 
+- **Managed agent runtime** — a fully-managed cloud service (e.g. Amazon Bedrock AgentCore) that hosts agents and productizes this guide's architecture: an MCP gateway/broker, an identity/credential vault, per-session sandbox isolation, central policy, and an audit plane. Adopt it as shared responsibility, not as a place to hand off security. → [Part 13](wiki/part-13-managed-cloud-ai-stack.md)
 - **Managed settings baseline** — a hardened configuration delivered by admins (MDM or root-owned config) that users cannot loosen: plan/ask default, bypass and auto modes disabled, sandbox enforced, managed-hooks-and-rules-only. → [Part 2](wiki/part-2-endpoint-hardening-and-policy-playbook.md)
 - **MCP (Model Context Protocol)** — the protocol agents use to reach external tool servers (databases, tickets, chat). Powerful and un-vetted by default, so it needs allowlisting and brokering. → [Part 1](wiki/part-1-risk-surface-and-control-model.md)
 - **MCP broker / trusted gateway** — a central, governed chokepoint through which all MCP tool access is routed, allow-listed, and logged, instead of each agent connecting to servers directly. → [Part 3](wiki/part-3-architecture-gateways-and-remote-defense.md)
@@ -96,6 +97,7 @@ Terms the guide leans on, defined once. The link points to the part where the te
 - **Sandbox (OS-level)** — enforcing an operating-system sandbox (macOS Seatbelt, Linux Landlock + seccomp) so agent commands cannot opt out of the confinement. → [Part 2](wiki/part-2-endpoint-hardening-and-policy-playbook.md)
 - **Self-hosted sandbox / environment worker** — running the agent's execution environment on infrastructure you control, which becomes the lever for applying your own security controls to agent compute. → [Part 4](wiki/part-4-beyond-the-hyperscalers.md)
 - **Shadow AI** — unsanctioned agents, tool servers, and AI chatbots proliferating faster than security can inventory them; the reason discovery comes first. → [Part 1](wiki/part-1-risk-surface-and-control-model.md)
+- **Shared responsibility (for agents)** — a managed AI platform splits each control into a half it runs (isolation, token vault, audit plane) and a half you keep (tool exposure, identity scope, isolation toggles, log wiring, the still-promptable model, provenance). "Managed" is not "done"; register who owns which half. → [Part 13](wiki/part-13-managed-cloud-ai-stack.md)
 
 ## T
 

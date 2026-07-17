@@ -16,6 +16,7 @@ The catalog of this wiki. Each page: one link, one-line summary. New here? Start
 - [Part 10 — Agent Identity and Non-Human Identity (NHI)](wiki/part-10-agent-identity.md) — the identity spine: delegation vs impersonation, ephemeral/just-in-time task-scoped access, intent-based access, and NHI lifecycle governance.
 - [Part 11 — Local and Open-Source Models on the Endpoint (Cline, LM Studio, Ollama)](wiki/part-11-local-open-source-models.md) — why local inference feels private but is not safe: it bypasses the AI gateway, the model file executes code on load, the local server is an unauthenticated socket, and the agent still acts; the govern-don't-ban playbook.
 - [Part 12 — Governance and Compliance](wiki/part-12-governance-compliance.md) — the CISO crosswalk: map the guide's controls to NIST AI RMF, ISO 42001, the EU AI Act, the OWASP LLM Top 10, and MITRE ATLAS, plus the program layer (intake/registry, owners, risk tiers, metrics).
+- [Part 13 — The Managed Cloud AI Stack (AgentCore, Bedrock, SageMaker)](wiki/part-13-managed-cloud-ai-stack.md) — managed feels safe but isn't done: the shared-responsibility line across the managed agent runtime, the managed model, and the model-building platform, mapped back to the guide's controls.
 
 ## Key concepts (where they're defined)
 
@@ -60,6 +61,8 @@ One-line pointers to the part that defines each. For the definitions themselves,
 - Autonomous agent + YOLO / auto-approve on a local model → Part 11
 - Framework crosswalk (OWASP LLM Top 10, MITRE ATLAS, NIST AI RMF, ISO 42001, EU AI Act) → Part 12
 - Program layer: AI/agent intake + registry, risk tiers, metrics → Part 12
+- Managed agent runtime (broker + credential vault + sandbox as a service) → Part 13
+- Shared responsibility for agents (platform's half vs. yours) → Part 13
 
 ## Sources
 
