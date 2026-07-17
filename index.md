@@ -1,6 +1,13 @@
-# Index
+---
+title: "A Security Engineer's Playbook for Agentic AI"
+layout: page
+---
 
-The catalog of this wiki. Each page: one link, one-line summary. New here? Start with [`start-here.md`](start-here.md) for reader tracks and the first five controls. Term definitions live in [`glossary.md`](glossary.md). Copy-ready control files are in [`templates/`](templates/README.md).
+A security engineer's playbook for defending **agentic AI coding assistants** — Claude Code, Cowork, Codex, Cursor and peers — and the wider agentic stack, across developer laptops, remote/cloud workspaces, and GPU-first / sandbox-native compute. It is an **LLM Wiki**: cross-referenced Markdown a human can read or an agent can pull as a policy source.
+
+**New here? Start with [Start Here](start-here.md)** — reader tracks (security engineer / platform-DevEx / CISO), the first five controls in order, and a crawl/walk/run maturity model. Term definitions live in [the glossary](glossary.md); copy-ready control files are in [`templates/`](templates/README.md).
+
+Below is the full catalog: every page, one line each.
 
 ## Guide
 

@@ -8,6 +8,15 @@ description: >-
 # A richer themed/search site is tracked in the README Roadmap.
 theme: minima
 
+# Curate the masthead. Without this, minima auto-lists EVERY titled page in the
+# header (all parts + template-tree pages), string-sorted so Part 10/11/12 fall
+# before Part 2 — a link-soup that fills the top of the landing page. Pin the three
+# navigational anchors instead; the parts are reached via the Index page's Guide list.
+header_pages:
+  - start-here.md
+  - index.md
+  - glossary.md
+
 # jekyll-relative-links rewrites the wiki's relative .md links (e.g. ../index.md,
 # part-2-...md) to the correct site URLs, so the same links work on github.com
 # AND on the rendered Pages site. Both plugins are supported on GitHub Pages.

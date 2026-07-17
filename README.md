@@ -2,7 +2,7 @@
 
 [![lint](https://github.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/actions/workflows/lint.yml/badge.svg)](https://github.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/actions/workflows/lint.yml) [![docs: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-blue.svg)](LICENSE) [![code: MIT](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE-CODE)
 
-**Defend AI coding agents — Claude Code, Cowork, Codex, Cursor — and the wider agentic stack across laptops, remote workspaces, and GPU/sandbox clouds.** Ten cross-referenced parts, from the risk model to endpoint hardening, detection, and agent identity. For security engineers, platform / developer-experience teams, and CISOs. → **New here? [Start here](start-here.md).**
+**Defend AI coding agents — Claude Code, Cowork, Codex, Cursor — and the wider agentic stack across laptops, remote workspaces, and GPU/sandbox clouds.** Cross-referenced parts, from the risk model through endpoint hardening, detection, agent identity, and governance. For security engineers, platform / developer-experience teams, and CISOs. → **New here? [Start here](start-here.md).**
 
 A security engineer's playbook for defending **agentic AI coding assistants** — Claude Code, Claude Cowork, Codex, Cursor and peers — across developer laptops, remote/cloud development environments, and the new tier of GPU-first and sandbox-native compute providers.
 
