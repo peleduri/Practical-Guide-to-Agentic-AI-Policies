@@ -19,6 +19,7 @@ part that explains the *why*; this tree is the *how*.
 | `detections/*.yml` + `*.spl` | Agent behavioral-IOC detections as Sigma + a Splunk example | [9](../wiki/part-9-detection-monitoring-ir.md), [11](../wiki/part-11-local-open-source-models.md) |
 | `identity/jit-scoped-grant.json` | Just-in-time, task-scoped grant shape (IBAC) | [10](../wiki/part-10-agent-identity.md) |
 | `identity/cross-account-role-trust.json` | AWS role trust done right (specific principal + ExternalId) | [10](../wiki/part-10-agent-identity.md) |
+| `identity/credential-broker.md` | The credential boundary: agent holds no provider secrets, a broker does | [10](../wiki/part-10-agent-identity.md) |
 | `workflows/ai-security-review-gate.md` | The pre-publish review-gate checklist for agentic workflows | [7](../wiki/part-7-agentic-workflow-platforms.md) |
 
 ## How to use it
