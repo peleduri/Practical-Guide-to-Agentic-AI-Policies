@@ -3,7 +3,10 @@ title: Practical Guide to Agentic AI Policies
 description: >-
   A security engineer's playbook for defending agentic AI coding assistants
   across laptops, remote workspaces, and GPU/sandbox clouds. An LLM Wiki.
-theme: jekyll-theme-cayman
+# minima renders from site.title/description and does NOT touch jekyll-github-metadata,
+# so the build can't fail on a live GitHub API call (that failure broke the cayman build).
+# A richer themed/search site is tracked in the README Roadmap.
+theme: minima
 
 # jekyll-relative-links rewrites the wiki's relative .md links (e.g. ../index.md,
 # part-2-...md) to the correct site URLs, so the same links work on github.com
