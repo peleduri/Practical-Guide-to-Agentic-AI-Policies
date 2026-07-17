@@ -24,6 +24,7 @@ Below is the full catalog: every page, one line each.
 - [Part 11 — Local and Open-Source Models on the Endpoint (Cline, LM Studio, Ollama)](wiki/part-11-local-open-source-models.md) — why local inference feels private but is not safe: it bypasses the AI gateway, the model file executes code on load, the local server is an unauthenticated socket, and the agent still acts; the govern-don't-ban playbook.
 - [Part 12 — Governance and Compliance](wiki/part-12-governance-compliance.md) — the CISO crosswalk: map the guide's controls to NIST AI RMF, ISO 42001, the EU AI Act, the OWASP LLM Top 10, and MITRE ATLAS, plus the program layer (intake/registry, owners, risk tiers, metrics).
 - [Part 13 — The Managed Cloud AI Stack (AgentCore, Bedrock, SageMaker)](wiki/part-13-managed-cloud-ai-stack.md) — managed feels safe but isn't done: the shared-responsibility line across the managed agent runtime, the managed model, and the model-building platform, mapped back to the guide's controls.
+- [Part 14 — Multi-Agent and Agent-to-Agent (A2A) Systems](wiki/part-14-multi-agent-a2a.md) — the guide's controls re-applied at every hop of an agent mesh: injection that self-replicates and gets laundered, confused-deputy escalation across agents, fleet blast radius, and the orchestration framework (LangChain/LangGraph) as its own attack surface.
 
 ## Key concepts (where they're defined)
 
@@ -70,6 +71,9 @@ One-line pointers to the part that defines each. For the definitions themselves,
 - Program layer: AI/agent intake + registry, risk tiers, metrics → Part 12
 - Managed agent runtime (broker + credential vault + sandbox as a service) → Part 13
 - Shared responsibility for agents (platform's half vs. yours) → Part 13
+- Multi-agent topology (orchestrator/sub-agent, A2A peers); secure the graph not the node → Part 14
+- Prompt infection (injection self-replicates + laundered) and cross-agent confused deputy → Part 14
+- The orchestration framework (LangChain/LangGraph) as attack surface → Part 14
 
 ## Sources
 

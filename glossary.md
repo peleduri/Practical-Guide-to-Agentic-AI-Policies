@@ -10,6 +10,7 @@ Terms the guide leans on, defined once. The link points to the part where the te
 
 ## A
 
+- **A2A (Agent-to-Agent) protocol** — an open standard (Google-originated, now Linux Foundation) for agents to discover, authenticate, and delegate tasks to each other across systems, via Agent Cards over HTTP/JSON-RPC. Security machinery to use: signed Agent Cards (domain verification) and mutual OAuth; still treat every peer's output as untrusted. → [Part 14](wiki/part-14-multi-agent-a2a.md)
 - **Agent allowlisting** — reducing the sprawl of installed AI agents to a small, explicit set of sanctioned ones and blocking or removing the rest; fewer runtimes to harden, smaller shadow-AI surface. → [Part 2](wiki/part-2-endpoint-hardening-and-policy-playbook.md)
 - **Agentic AI coding assistant** — an AI tool that does not just answer but *acts* on the developer's machine: runs commands, reads and writes files, makes network calls, and drives external tools. Its ability to act is its primary risk. → [Part 1](wiki/part-1-risk-surface-and-control-model.md)
 - **Agentic workflow platform** — a platform (e.g. n8n, Gemini Enterprise) that wires agentic automations into enterprise data and systems via triggers, connectors, and sometimes arbitrary code. → [Part 7](wiki/part-7-agentic-workflow-platforms.md)
@@ -73,6 +74,7 @@ Terms the guide leans on, defined once. The link points to the part where the te
 - **MCP (Model Context Protocol)** — the protocol agents use to reach external tool servers (databases, tickets, chat). Powerful and un-vetted by default, so it needs allowlisting and brokering. → [Part 1](wiki/part-1-risk-surface-and-control-model.md)
 - **MCP broker / trusted gateway** — a central, governed chokepoint through which all MCP tool access is routed, allow-listed, and logged, instead of each agent connecting to servers directly. → [Part 3](wiki/part-3-architecture-gateways-and-remote-defense.md)
 - **Model-file supply chain** — treating downloaded model weights as executable artifacts: pickle-format models run code on load (RCE), even "safe" formats like GGUF have carried payloads in metadata, and the loading runtime itself has had RCE CVEs. Allowlist sources, prefer safetensors, scan, and pin. → [Part 11](wiki/part-11-local-open-source-models.md)
+- **Multi-agent system (agent mesh)** — orchestrators spawning sub-agents, or independent agents discovering and calling each other (A2A). The risk lives in the edges between agents, not the nodes; secure every hop (identity, input screening, brokering, logging) and operate the kill switch at fleet scale. → [Part 14](wiki/part-14-multi-agent-a2a.md)
 
 ## N
 
@@ -87,6 +89,7 @@ Terms the guide leans on, defined once. The link points to the part where the te
 - **Personal always-on assistant** — an autonomous, messaging-connected, self-scheduling assistant (the OpenClaw / NanoClaw class) that acts without a prompt and answers to anyone who can message it. → [Part 5](wiki/part-5-personal-always-on-assistants.md)
 - **PreToolUse hook** — a script the agent invokes before every tool call that returns allow / ask / block; the concrete endpoint enforcement primitive (Part 2 ships a real, de-identified one that guards GitHub Enterprise admin). → [Part 2](wiki/part-2-endpoint-hardening-and-policy-playbook.md)
 - **Prompt-submit / pre-tool / post-tool interception** — the three enforcement surfaces: reviewing the instruction before the LLM sees it, checking a tool call before it runs, and inspecting a tool response before the agent consumes it. → [Part 1](wiki/part-1-risk-surface-and-control-model.md), [Part 2](wiki/part-2-endpoint-hardening-and-policy-playbook.md)
+- **Prompt infection (cross-agent injection)** — in a multi-agent system, an injected instruction propagates from one agent's context into the next through normal inter-agent messages, and gets *laundered* into a cleaner, more trusted-looking form as intermediate agents reformat it. Peer output is trusted more than external input, which is the vulnerability; re-screen every inter-agent message. → [Part 14](wiki/part-14-multi-agent-a2a.md)
 
 ## R
 
