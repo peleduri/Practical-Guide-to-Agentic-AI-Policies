@@ -29,6 +29,7 @@ Terms the guide leans on, defined once. The link points to the part where the te
 - **Causal chain (agent audit trail)** — logging each agent action as a decision with its full context: identity, triggering input, policy evaluated, decision, tool and arguments, response, and the reasoning the agent had — not just the bare action. → [Part 9](wiki/part-9-detection-monitoring-ir.md)
 - **Claude Cowork / computer use** — the autonomous desktop agent; "computer use" is its unsandboxed path that drives the actual screen and browser, the highest-risk mode. → [Part 2](wiki/part-2-endpoint-hardening-and-policy-playbook.md)
 - **Connector** — an integration that grants a workflow or Work AI platform access to a data source or system; over-reaching connectors are a primary risk, so map each to an exact, least-privilege identity. → [Part 7](wiki/part-7-agentic-workflow-platforms.md), [Part 8](wiki/part-8-work-ai-and-dspm.md)
+- **Credential boundary / broker** — a gateway that holds downstream provider secrets and exposes only metadata, scoped actions, and results to the agent, so the agent authenticates to the broker and never holds the raw credential; a compromised agent can't exfiltrate a secret it never received. → [Part 10](wiki/part-10-agent-identity.md)
 
 ## D
 

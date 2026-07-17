@@ -54,6 +54,7 @@ One-line pointers to the part that defines each. For the definitions themselves,
 - Agent / non-human identity (NHI); delegation vs impersonation → Part 10
 - Ephemeral / just-in-time task-scoped access; no standing privilege → Part 10
 - Intent-based access (declared task = permission boundary); NHI lifecycle → Part 10
+- Credential boundary / broker (agent never holds the provider secret) → Part 10
 - Local inference bypasses the AI gateway (private ≠ safe) → Part 11
 - Model-file supply chain (pickle/GGUF executes on load) → Part 11
 - Autonomous agent + YOLO / auto-approve on a local model → Part 11
