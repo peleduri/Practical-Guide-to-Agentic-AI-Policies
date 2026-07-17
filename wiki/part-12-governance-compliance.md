@@ -83,6 +83,17 @@ No single control in Parts 1–11 provides these; they are the connective tissue
 - **Evidence collection.** Wire the enforcement and detection logs (Parts 2/3/9) so an audit answer is a query, not a scramble.
 - **Continual review.** AI RMF and ISO 42001 are cycles; the registry, classifications, and control mappings are reviewed on a cadence, because the surface (and the regulations) keep moving.
 
+## The Playbook (operationalizing governance)
+
+Part 12's audience is the CISO, but the program only works if the security engineer wires it into the technical layers the rest of the guide built. This is that engineer's checklist.
+
+- **Turn discovery into a registry, not a one-time scan.** Feed the [Part 1](part-1-risk-surface-and-control-model.md) discovery output into a system of record — every agent, workflow, Work-AI connection, and model with an owner, purpose, EU-style risk tier, and decommission date — and re-run it on a cadence so shadow AI reappears in the registry, not just in a slide.
+- **Make the mappings queryable, not narrative.** Tag each control (the crosswalk tables above) so an OWASP/ATLAS/RMF/EU-Act question resolves to "which parts answer it" as a lookup — the crosswalk is only useful if it survives contact with an auditor.
+- **Wire the evidence pipeline.** Route the enforcement and detection logs (Parts [2](part-2-endpoint-hardening-and-policy-playbook.md)/[3](part-3-architecture-gateways-and-remote-defense.md)/[9](part-9-detection-monitoring-ir.md)) into a store where an audit answer is a query, not a scramble — logging/record-keeping is an EU-Act obligation, not a nicety.
+- **Instrument the CISO metrics at the source.** The handful that matter (shadow-AI discovered vs sanctioned, % of agents under the managed baseline, mean-time-to-revoke a compromised agent identity, open high-severity agent findings, registry coverage) come from the discovery, identity ([Part 10](part-10-agent-identity.md)), and detection layers — emit them, don't hand-collect them.
+- **Classify at intake and let obligations scale.** Tier each system as it enters the registry so high-risk systems inherit the stricter controls automatically, instead of applying uniform overhead to everything.
+- **Put the mappings on the review cadence.** AI RMF and ISO 42001 are cycles; when a control changes or a regulation shifts (the EU dates keep moving), the registry, tiers, and crosswalk get reviewed — stale mappings fail an audit as surely as missing ones.
+
 ## Bottom Line
 
 The frameworks do not replace the controls in this guide; they are the languages you evidence and report those controls in. OWASP and ATLAS name what you are defending against, NIST and ISO give you the program to run and certify, and the EU AI Act sets the legal floor with real deadlines. Build the controls once, map them once, and you can answer a red-team threat model, a NIST assessment, an ISO audit, and a regulator's inquiry from the same body of work — plus the program scaffolding (registry, owners, tiers, metrics) that turns a pile of controls into a governable program.
@@ -97,4 +108,4 @@ The frameworks do not replace the controls in this guide; they are the languages
 
 ---
 
-Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · **[Start Here](../start-here.md)** · _Part 12 is the final part._
+Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · Next → **[Part 13 — The Managed Cloud AI Stack](part-13-managed-cloud-ai-stack.md)**

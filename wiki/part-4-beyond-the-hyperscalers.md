@@ -57,6 +57,18 @@ Controls from the earlier parts must be ported to this new compute boundary:
 - **MCP gateway** — route all sandbox-originating tool calls through a trusted MCP gateway (see [Part 3](part-3-architecture-gateways-and-remote-defense.md)) to enforce data-aware rules and secret blocking.
 - **Network guardrails** — rebuild default-deny egress inside the provider's network policy to prevent data exfiltration.
 
+## The Playbook
+
+The security engineer's checklist when agent compute moves to a GPU-first or sandbox-native provider — work it top to bottom.
+
+- **Audit the provider across the control domains before onboarding.** Tenancy/isolation (real microVM isolation and VRAM scrubbing, not shared containers), credential hygiene, egress control, exportable audit trail, data-residency/no-training terms, and compliance maturity (SOC 2/ISO, single-tenant option, IR commitments). Assess it like any vendor holding your source and secrets.
+- **Prefer the self-hosted sandbox worker.** Keep orchestration vendor-side, move tool execution onto infrastructure you control via an environment worker, so source, filesystem, and egress never leave your boundary — only tool I/O flows to the model plane.
+- **Separate credentials.** The worker uses an environment key to its queue; the model-provider API key stays off the worker host, and custom tools reach only the internal services and egress you configured.
+- **Bake the endpoint controls into the sandbox image.** Pre-tool hooks and managed settings ([Part 2](part-2-endpoint-hardening-and-policy-playbook.md)) as root-owned config in the image — MDM cannot reach this compute.
+- **Route tool calls through the MCP broker ([Part 3](part-3-architecture-gateways-and-remote-defense.md)).** Enforce data-aware rules and secret blocking on every sandbox-originating call.
+- **Rebuild default-deny egress inside the provider's network policy.** No VPC means open-internet by default; re-establish the allowlist to close the prompt-injection exfiltration path.
+- **Re-establish the audit trail.** Export provider logs to your SIEM ([Part 9](part-9-detection-monitoring-ir.md)); do not assume an immutable trail exists on a young platform.
+
 ## Bottom Line
 
 Shifting agent compute to specialized providers improves isolation through ephemeral microVMs, but the security gain is illusory if the foundational layers of IAM, audit, and egress control are not re-established. Assess these providers with the same rigor as any vendor holding your source code and secrets, and prioritize the self-hosted-sandbox worker model to keep execution and data inside a boundary you control while still leveraging high-performance agentic compute.

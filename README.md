@@ -28,6 +28,7 @@ It is organized as an **LLM Wiki** (following [Andrej Karpathy's pattern](https:
 10. **[Part 10 — Agent Identity and Non-Human Identity (NHI)](wiki/part-10-agent-identity.md)** — the identity spine the guide leaned on: give each agent its own identity and delegate (don't impersonate), make access ephemeral / just-in-time / task-scoped with no standing privilege, validate intent against action, and govern the NHI lifecycle.
 11. **[Part 11 — Local and Open-Source Models on the Endpoint (Cline, LM Studio, Ollama)](wiki/part-11-local-open-source-models.md)** — running open-weights models locally feels private and is therefore treated as safe; it is neither. It bypasses the AI gateway, the model file executes code on load, the local server is an unauthenticated socket, and the agent still acts — plus the govern-don't-ban playbook.
 12. **[Part 12 — Governance and Compliance](wiki/part-12-governance-compliance.md)** — the CISO crosswalk: map the guide's controls to NIST AI RMF, ISO 42001, the EU AI Act, the OWASP LLM Top 10, and MITRE ATLAS, and add the program layer (AI/agent intake + registry, named owners, risk tiers, and the handful of metrics a CISO reports).
+13. **[Part 13 — The Managed Cloud AI Stack (AgentCore, Bedrock, SageMaker)](wiki/part-13-managed-cloud-ai-stack.md)** — the inverse of Part 11: managed feels safe but isn't done. A hyperscaler's agent stack is SOC-compliant and productizes this guide's own architecture (managed broker, credential vault, sandbox, audit plane), which is exactly what makes teams stop at "the platform handles security." The shared-responsibility line across the agent runtime, the model, and the model-building layer.
 
 ## Who it's for
 
@@ -37,6 +38,7 @@ Security engineers, platform / developer-experience teams, and CISOs standing up
 
 - Vendor and product names are **examples, not endorsements**. Agent controls change quickly — verify against the vendor docs cited on each page before relying on a specific setting.
 - This is a general playbook; nothing here is specific to any one organization.
+- Every action-oriented part ends with a **security engineer's playbook** — a scannable "what to do" checklist. Governance (Part 12) also carries an engineer-facing "operationalize the governance" checklist alongside the CISO material.
 - Living document. See [`log.md`](log.md) for history.
 
 ## Roadmap
