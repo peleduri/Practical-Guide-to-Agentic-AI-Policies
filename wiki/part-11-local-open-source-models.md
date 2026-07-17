@@ -71,4 +71,4 @@ Local and open-source models are not a loophole to close, but they are the least
 
 ---
 
-Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · **[Start Here](../start-here.md)** · _Part 11 is the final part._
+Nav: **[← Index](../index.md)** · **[Glossary](../glossary.md)** · Next → **[Part 12 — Governance and Compliance](part-12-governance-compliance.md)**

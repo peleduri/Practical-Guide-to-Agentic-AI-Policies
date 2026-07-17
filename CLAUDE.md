@@ -1,6 +1,6 @@
 # Repository schema — LLM Wiki
 
-This repository is an **LLM Wiki** (per Andrej Karpathy's pattern): a compounding, cross-referenced set of markdown pages that a human or an LLM can read, extend, and maintain. It is the practical companion to a ten-part security guide on defending agentic AI.
+This repository is an **LLM Wiki** (per Andrej Karpathy's pattern): a compounding, cross-referenced set of markdown pages that a human or an LLM can read, extend, and maintain. It is the practical companion to a multi-part security guide on defending agentic AI.
 
 ## Layout
 

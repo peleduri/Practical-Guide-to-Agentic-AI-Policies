@@ -2,7 +2,7 @@
 
 The catalog of this wiki. Each page: one link, one-line summary. New here? Start with [`start-here.md`](start-here.md) for reader tracks and the first five controls. Term definitions live in [`glossary.md`](glossary.md). Copy-ready control files are in [`templates/`](templates/README.md).
 
-## Guide (ten parts)
+## Guide
 
 - [Part 1 — The Risk Surface and Control Model](wiki/part-1-risk-surface-and-control-model.md) — why agentic AI is a new security surface; the risk model; the discovery + enforcement two-layer model.
 - [Part 2 — Endpoint Hardening and Policy Playbook](wiki/part-2-endpoint-hardening-and-policy-playbook.md) — tool-call and MCP controls, data-aware rules, managed-settings baselines for Claude Code / Codex / Cursor, a real PreToolUse hook example, and Claude Cowork controls.
@@ -15,6 +15,7 @@ The catalog of this wiki. Each page: one link, one-line summary. New here? Start
 - [Part 9 — Detection, Monitoring, and Incident Response for Agents](wiki/part-9-detection-monitoring-ir.md) — the operational other half: what to log (the causal chain), agent behavioral IOCs, a fail-safe kill switch, agent forensics, and the AI-native SOC.
 - [Part 10 — Agent Identity and Non-Human Identity (NHI)](wiki/part-10-agent-identity.md) — the identity spine: delegation vs impersonation, ephemeral/just-in-time task-scoped access, intent-based access, and NHI lifecycle governance.
 - [Part 11 — Local and Open-Source Models on the Endpoint (Cline, LM Studio, Ollama)](wiki/part-11-local-open-source-models.md) — why local inference feels private but is not safe: it bypasses the AI gateway, the model file executes code on load, the local server is an unauthenticated socket, and the agent still acts; the govern-don't-ban playbook.
+- [Part 12 — Governance and Compliance](wiki/part-12-governance-compliance.md) — the CISO crosswalk: map the guide's controls to NIST AI RMF, ISO 42001, the EU AI Act, the OWASP LLM Top 10, and MITRE ATLAS, plus the program layer (intake/registry, owners, risk tiers, metrics).
 
 ## Key concepts (where they're defined)
 
@@ -56,6 +57,8 @@ One-line pointers to the part that defines each. For the definitions themselves,
 - Local inference bypasses the AI gateway (private ≠ safe) → Part 11
 - Model-file supply chain (pickle/GGUF executes on load) → Part 11
 - Autonomous agent + YOLO / auto-approve on a local model → Part 11
+- Framework crosswalk (OWASP LLM Top 10, MITRE ATLAS, NIST AI RMF, ISO 42001, EU AI Act) → Part 12
+- Program layer: AI/agent intake + registry, risk tiers, metrics → Part 12
 
 ## Sources
 

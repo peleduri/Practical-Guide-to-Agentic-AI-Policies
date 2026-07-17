@@ -14,6 +14,7 @@ Terms the guide leans on, defined once. The link points to the part where the te
 - **Agentic AI coding assistant** — an AI tool that does not just answer but *acts* on the developer's machine: runs commands, reads and writes files, makes network calls, and drives external tools. Its ability to act is its primary risk. → [Part 1](wiki/part-1-risk-surface-and-control-model.md)
 - **Agentic workflow platform** — a platform (e.g. n8n, Gemini Enterprise) that wires agentic automations into enterprise data and systems via triggers, connectors, and sometimes arbitrary code. → [Part 7](wiki/part-7-agentic-workflow-platforms.md)
 - **Agent forensics** — preserving the full context of an agent incident — prompts, tool I/O, guardrail decisions, retrieval bundles, memory and sandbox snapshots — tamper-evidently, because action logs alone cannot reconstruct what happened. → [Part 9](wiki/part-9-detection-monitoring-ir.md)
+- **AI / agent registry (intake)** — a governed inventory (the discovery of Part 1 turned into a system of record) of every agent, workflow, Work-AI connection, and model, each with an owner, purpose, risk tier, and decommission date; what you govern and audit against. → [Part 12](wiki/part-12-governance-compliance.md)
 - **AI gateway (model-egress gateway)** — the proxy that governs prompts leaving the org for an LLM. Necessary but not sufficient: it sees the prompt, not the agent's local actions. Route workflow and agent model calls through it. → [Part 1](wiki/part-1-risk-surface-and-control-model.md), [Part 7](wiki/part-7-agentic-workflow-platforms.md)
 - **AI-native / context-graph SOC** — a detection-and-response approach that investigates each alert against a living graph of the environment (architecture, identities, past cases) instead of static rules; itself an agent subject to this guide. → [Part 9](wiki/part-9-detection-monitoring-ir.md)
 - **Allow / Ask / Deny** — the three outcomes of an enforcement decision: permit silently, prompt the human to confirm, or block outright. → [Part 1](wiki/part-1-risk-surface-and-control-model.md), [Part 2](wiki/part-2-endpoint-hardening-and-policy-playbook.md)
@@ -40,6 +41,10 @@ Terms the guide leans on, defined once. The link points to the part where the te
 - **Enforcement (active)** — Layer 2 of the defense: intercepting agent activity in real time at prompt-submit, pre-tool, and post-tool surfaces and applying allow/ask/deny. → [Part 1](wiki/part-1-risk-surface-and-control-model.md), [Part 2](wiki/part-2-endpoint-hardening-and-policy-playbook.md)
 - **Ephemeral / just-in-time / task-scoped access** — credentials granted at request time, scoped to the exact task, expiring on their own, with no standing privilege left behind between tasks. → [Part 10](wiki/part-10-agent-identity.md)
 - **Extension supply chain** — the skills, plugins, commands, hooks, and subagents loaded into an agent, treated as reviewed software (provenance, pinning, scanning) rather than convenient add-ons. → [Part 6](wiki/part-6-extension-supply-chain.md)
+
+## F
+
+- **Framework crosswalk** — mapping the guide's technical controls to the frameworks a program is evidenced and reported in: OWASP LLM Top 10 and MITRE ATLAS (threats), NIST AI RMF and ISO/IEC 42001 (program), and the EU AI Act (law). Build the controls once, report them many ways. → [Part 12](wiki/part-12-governance-compliance.md)
 
 ## G
 
