@@ -11,6 +11,7 @@ This repository is an **LLM Wiki** (per Andrej Karpathy's pattern): a compoundin
 - `start-here.md` — the on-ramp: reader tracks (security engineer / platform-DevEx / CISO), the first five controls in order, and a crawl/walk/run maturity model.
 - `glossary.md` — one-line definitions of the terms used across the parts, each pointing to the part that defines it. Definitions live here; `index.md`'s "Key concepts" is only a compact concept→part pointer.
 - `scripts/lint.sh` — the wiki's test suite: fails on a broken relative link or an orphan part. CI runs it on every PR via `.github/workflows/lint.yml`.
+- `templates/` — copy-ready controls (config baselines, the PreToolUse hook, Sigma+SPL detections, identity/workflow examples), each mapped to its part. Examples to adapt, not drop-in.
 
 ## Conventions
 

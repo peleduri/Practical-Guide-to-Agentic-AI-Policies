@@ -1,0 +1,33 @@
+# EXAMPLE Sigma. Detects an agent invoking a tool outside its declared/allowlisted set —
+# the Part 9 "unusual tool-invocation sequence" IOC and the Part 10 intent-vs-action check.
+# Requires an agent audit log with the tool name per call (Part 9's causal-chain log).
+title: Agent invoked a tool outside its allowlist
+id: 8c1d4b7a-2e6f-49a0-b1c2-agenttoolseq1
+status: experimental
+description: >-
+  An agent called a tool that is not in the set it is scoped to use. Maintain the
+  allowlist per agent role; anything outside it is either misconfiguration or an agent
+  being steered (prompt injection). Pairs with the Part 10 declared-intent boundary.
+logsource:
+  category: application
+  product: agent_audit
+detection:
+  sel:
+    event: tool_call
+  filter_allowed:
+    # per-agent allowlist; keep this list in sync with each agent's declared scope
+    tool_name:
+      - read_file
+      - write_file
+      - run_tests
+      - search_code
+  condition: sel and not filter_allowed
+fields:
+  - agent_id
+  - user
+  - tool_name
+  - tool_args
+level: medium
+tags:
+  - attack.execution
+  - attack.t1059

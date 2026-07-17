@@ -1,0 +1,12 @@
+``` EXAMPLE Splunk SPL — agent token/request spike (see .yml).
+    Dynamic baseline version: compare each agent's 5-min volume to its own recent average
+    instead of a fixed number, so busy agents don't alert constantly. ```
+
+index=agent_audit event=model_request
+| bin _time span=5m
+| stats sum(tokens) as tokens count as requests by _time agent_id
+| eventstats avg(requests) as avg_req stdev(requests) as sd_req by agent_id
+| eval threshold = avg_req + (3 * sd_req)
+| where requests > threshold AND requests > 50
+| table _time agent_id requests avg_req tokens
+| sort - requests

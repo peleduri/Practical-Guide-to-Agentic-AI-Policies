@@ -1,0 +1,30 @@
+{
+  "_comment": "EXAMPLE just-in-time, task-scoped grant (Part 10 / intent-based access). Conceptual contract — map onto your JIT-access platform. The declared task IS the permission boundary; the grant auto-expires.",
+  "grant": {
+    "agent_id": "agent://ci-refactor-bot",
+    "on_behalf_of": "user://jane.doe",
+    "declared_intent": "Read the failing test log and open a fix PR on repo acme/widgets",
+    "scope": {
+      "allow": [
+        "github:repo:acme/widgets:contents:read",
+        "github:repo:acme/widgets:pull_requests:write",
+        "ci:job:widgets-tests:logs:read"
+      ],
+      "deny_by_default": true
+    },
+    "resources": ["acme/widgets"],
+    "constraints": {
+      "no_standing_privilege": true,
+      "requires_request_time_approval": false,
+      "network_egress_allowlist": ["api.github.com"]
+    },
+    "issued_at": "2026-07-17T00:00:00Z",
+    "expires_at": "2026-07-17T00:30:00Z",
+    "ttl_seconds": 1800,
+    "revocable": true,
+    "audit": {
+      "validate_actions_against_intent": true,
+      "log_to": "siem://agent_audit"
+    }
+  }
+}

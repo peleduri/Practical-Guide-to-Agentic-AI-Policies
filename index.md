@@ -1,6 +1,6 @@
 # Index
 
-The catalog of this wiki. Each page: one link, one-line summary. New here? Start with [`start-here.md`](start-here.md) for reader tracks and the first five controls. Term definitions live in [`glossary.md`](glossary.md).
+The catalog of this wiki. Each page: one link, one-line summary. New here? Start with [`start-here.md`](start-here.md) for reader tracks and the first five controls. Term definitions live in [`glossary.md`](glossary.md). Copy-ready control files are in [`templates/`](templates/README.md).
 
 ## Guide (ten parts)
 

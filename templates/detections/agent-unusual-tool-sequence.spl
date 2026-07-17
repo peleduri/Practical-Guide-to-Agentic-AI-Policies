@@ -1,0 +1,9 @@
+``` EXAMPLE Splunk SPL — agent tool call outside its allowlist (see .yml).
+    Maintain the per-agent allowlist in a lookup (agent_tool_allowlist.csv:
+    agent_id, tool_name). Anything not in the lookup is surfaced. ```
+
+index=agent_audit event=tool_call
+| lookup agent_tool_allowlist agent_id tool_name OUTPUT tool_name as allowed
+| where isnull(allowed)
+| stats count values(tool_name) as tools_used min(_time) as first last(_time) as last by agent_id user
+| sort - count

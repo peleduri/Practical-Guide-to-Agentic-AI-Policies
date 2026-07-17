@@ -1,0 +1,33 @@
+# EXAMPLE Sigma (event_count correlation). Flags a sudden jump in an agent's token/request
+# volume — the Part 9 "token / cost spike" IOC, catching runaway loops and abuse.
+# Tune the count/timespan to your baseline; a fixed threshold WILL false-positive until you do.
+title: Agent request/token volume spike
+name: agent_model_request
+status: experimental
+logsource:
+  category: application
+  product: agent_audit
+detection:
+  sel:
+    event: model_request
+  condition: sel
+---
+title: Agent request volume spike
+id: 3a7e9c14-5b8d-42f6-9d0a-agenttokenspk
+status: experimental
+description: >-
+  An agent issued an unusually high number of model requests in a short window. Flags
+  runaway agent loops (cost + noise) and automated abuse. Prefer a dynamic baseline
+  (per-agent moving average) over the fixed threshold shown here.
+correlation:
+  type: event_count
+  rules:
+    - agent_model_request
+  group-by:
+    - agent_id
+  timespan: 5m
+  condition:
+    gte: 200
+level: medium
+tags:
+  - attack.impact

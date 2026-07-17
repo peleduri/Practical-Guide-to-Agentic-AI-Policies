@@ -1,0 +1,19 @@
+{
+  "_comment": "EXAMPLE AWS IAM role trust policy (Part 10 delegation, cloud layer). A specific principal (NO wildcard) and an ExternalId condition to defeat the confused-deputy problem. Cap session length separately via the role's MaxSessionDuration (e.g. 3600s) — it is not set here. Replace the account IDs, role name, and ExternalId with your own; store the ExternalId as a secret, not in source.",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowScopedCrossAccountAssume",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::111122223333:role/agent-runner"
+      },
+      "Action": "sts:AssumeRole",
+      "Condition": {
+        "StringEquals": {
+          "sts:ExternalId": "REPLACE-WITH-A-SECRET-EXTERNAL-ID"
+        }
+      }
+    }
+  ]
+}

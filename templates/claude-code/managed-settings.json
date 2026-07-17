@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "defaultMode": "plan",
+    "disableBypassPermissionsMode": "disable"
+  },
+  "autoUpdatesChannel": "stable",
+  "disableAutoMode": "disable",
+  "skipAutoPermissionPrompt": false,
+  "skipDangerousModePermissionPrompt": false,
+  "skipWebFetchPreflight": false,
+  "allowManagedHooksOnly": true,
+  "allowManagedPermissionRulesOnly": true,
+  "sandbox": {
+    "enabled": true,
+    "allowUnsandboxedCommands": false
+  }
+}

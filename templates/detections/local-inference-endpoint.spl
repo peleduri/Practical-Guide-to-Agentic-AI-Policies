@@ -1,0 +1,10 @@
+``` EXAMPLE Splunk SPL — local model runtime on an endpoint (see .yml).
+    Source is endpoint telemetry (EDR/osquery process + listening-port data), not a SIEM
+    app log. Extra value: flag any that bind to 0.0.0.0 (LAN-exposed, Part 11). ```
+
+index=edr (process_name IN ("ollama","ollama.exe","LM Studio","LM Studio.exe")
+           OR dest_port IN (11434, 1234))
+| eval lan_exposed=if(bind_address="0.0.0.0","YES","no")
+| stats values(process_name) as runtimes values(dest_port) as ports values(lan_exposed) as lan_exposed
+        latest(_time) as last by host user
+| sort - last

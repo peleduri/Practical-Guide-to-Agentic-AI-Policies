@@ -1,0 +1,35 @@
+# EXAMPLE Sigma. Surfaces a local model runtime running on an endpoint — the Part 11
+# shadow-AI signal (Ollama, LM Studio). Runs against process-creation or listening-port
+# telemetry (EDR / osquery), not a SIEM app log. Alert to discovery, not necessarily to IR.
+title: Local model runtime detected on endpoint
+id: 9b2f6d81-4a3c-4e70-8c1b-localinfer001
+status: experimental
+description: >-
+  A local LLM runtime (Ollama, LM Studio) is running. This is the least-governed
+  inference path (Part 11): it bypasses the AI gateway. Inventory it; verify it is
+  sanctioned, patched, and bound to loopback (not 0.0.0.0).
+logsource:
+  category: process_creation
+detection:
+  sel_image:
+    Image|endswith:
+      - '/ollama'
+      - '/lm-studio'
+      - '/LM Studio'
+      - '\ollama.exe'
+      - '\LM Studio.exe'
+  sel_port:
+    # OpenAI-compatible local servers commonly listen here
+    DestinationPort:
+      - 11434   # Ollama default
+      - 1234    # LM Studio default
+  condition: sel_image or sel_port
+fields:
+  - host
+  - user
+  - Image
+  - DestinationPort
+level: low
+tags:
+  - discovery
+  - shadow_ai
