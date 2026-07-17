@@ -47,7 +47,8 @@ Security engineers, platform / developer-experience teams, and CISOs standing up
 Planned, not yet written — issues and contributions welcome:
 
 - **A DevEx rollout part** — staged pilot, break-glass / exceptions, and the guardrail-vs-velocity tradeoff.
-- **Site search** — a docs theme with full-text search across all parts.
+
+Full-text search across all parts is available on the published docs mirror.
 
 ## License
 
