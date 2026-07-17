@@ -52,3 +52,7 @@ Planned, not yet written — issues and contributions welcome:
 
 - **Documentation** (all prose and diagrams): [Creative Commons Attribution 4.0 International](LICENSE) (CC BY 4.0) — share and adapt freely, with credit.
 - **Code** (`scripts/`, `.github/`, and the config / hook snippets): [MIT](LICENSE-CODE).
+
+## Author
+
+By Uri Peled — [LinkedIn](https://www.linkedin.com/in/uri-peled/). Feedback, corrections, and contributions welcome via issues and pull requests.
