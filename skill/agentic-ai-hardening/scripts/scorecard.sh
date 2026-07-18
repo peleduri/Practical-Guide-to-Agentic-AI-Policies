@@ -37,7 +37,7 @@ has_att="$(printf '%s' "$json" | jq -r 'any(.controls[]?; .attested == true) // 
 
 case "$maturity" in
   crawl) mcol="#cc0000"; mlabel="CRAWL"; mpos="0"; mshield="red" ;;
-  walk)  mcol="#b8860b"; mlabel="WALK";  mpos="1"; mshield="yellow" ;;
+  walk)  mcol="#c2410c"; mlabel="WALK";  mpos="1"; mshield="c2410c" ;;
   run)   mcol="#228b22"; mlabel="RUN";   mpos="2"; mshield="brightgreen" ;;
 esac
 
@@ -56,7 +56,7 @@ while IFS=$'\t' read -r label status attested; do
   [ -n "$label" ] || continue
   case "$status" in
     present) dot="#228b22"; word="present" ;;
-    partial) dot="#b8860b"; word="partial" ;;
+    partial) dot="#c2410c"; word="partial" ;;
     *)       dot="#cc0000"; word="missing" ;;
   esac
   att=""; [ "$attested" = "true" ] && att="<span class=\"att\">self-reported</span>"
