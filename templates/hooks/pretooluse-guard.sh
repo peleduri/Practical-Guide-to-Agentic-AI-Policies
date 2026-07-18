@@ -33,6 +33,9 @@ norm="$(printf '%s' "$cmd" | tr '\n\r' '  ')"
 log() { printf '%s\t%s\t%s\t%s\n' "$(date -u +%FT%TZ)" "$1" "${tool:-?}" "${2:-}" >>"$LOG" 2>/dev/null || true; }
 ask() { log ASK "$1"; printf '{"hookSpecificOutput":{"permissionDecision":"ask","permissionDecisionReason":"%s"}}\n' "$1"; exit 0; }
 block() { log BLOCK "$1"; echo "BLOCKED by guard: $1" >&2; exit 2; }
+# allow() takes an optional reason for symmetry with ask()/block(); the default
+# path calls it bare, so silence SC2120 (older shellcheck flags the unused arg).
+# shellcheck disable=SC2120
 allow() { log ALLOW "${1:-}"; exit 0; }
 
 # --- 1. HARD BLOCK: destructive, unrecoverable commands ---
