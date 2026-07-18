@@ -12,6 +12,7 @@ This repository is an **LLM Wiki** (per Andrej Karpathy's pattern): a compoundin
 - `glossary.md` — one-line definitions of the terms used across the parts, each pointing to the part that defines it. Definitions live here; `index.md`'s "Key concepts" is only a compact concept→part pointer.
 - `scripts/lint.sh` — the wiki's test suite: fails on a broken relative link or an orphan part. CI runs it on every PR via `.github/workflows/lint.yml`.
 - `templates/` — copy-ready controls (config baselines, the PreToolUse hook, Sigma+SPL detections, identity/workflow examples), each mapped to its part. Examples to adapt, not drop-in.
+- `skill/` — the guide packaged as a portable Agent Skill (`skill/agentic-ai-hardening/SKILL.md`) that runs on Claude Code / Codex CLI / Cursor: discover → assess → report → opt-in harden. The one script it *executes* (discovery) is bundled at `skill/agentic-ai-hardening/scripts/inventory-agents.sh` — a verbatim copy of `templates/discovery/inventory-agents.sh` that `scripts/lint.sh` enforces stays identical (so the skill never fetches-and-runs remote code); the *controls* it writes are fetched from their canonical raw URLs, preview-then-write. When a control or the maturity model changes, keep the skill's Control Catalog and checklist in sync.
 
 ## Conventions
 

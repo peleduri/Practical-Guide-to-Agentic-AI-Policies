@@ -20,13 +20,14 @@ This guide is the **implementation companion** — the part that ships the contr
 - [just-in-time, task-scoped identity grants](templates/identity/) and a credential-broker pattern;
 - a fail-safe [agent kill switch](templates/incident/agent-kill-switch.sh) and a [pre-publish review gate](templates/workflows/ai-security-review-gate.md) for agentic workflows.
 
-Use it **alongside** those frameworks, not instead of them: they catalog the risk, this closes it. The [five first controls](start-here.md) each ship a copy-ready artifact in [`templates/`](templates/); every part explains the *why* in prose and links the *how*.
+Use it **alongside** those frameworks, not instead of them: they catalog the risk, this closes it. The [five first controls](start-here.md) each ship a copy-ready artifact in [`templates/`](templates/); every part explains the *why* in prose and links the *how*. And the whole loop runs as a [skill](skill/README.md) — point your coding agent at it and it assesses your posture and, with your confirmation, installs the controls. A catalog can't do that.
 
 ## Use this guide
 
 - **Browse it as a site.** The wiki is published with GitHub Pages at **https://peleduri.github.io/Practical-Guide-to-Agentic-AI-Policies/** (also in the About panel).
 - **Point your agent at it.** This is an LLM Wiki, meant to be pulled by an agent as a policy source. Machine index: [`llms.txt`](llms.txt). Every page is plain Markdown at a stable raw URL, e.g. `https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-2-endpoint-hardening-and-policy-playbook.md`.
 - **Lift the controls.** Copy-ready configs, a working PreToolUse hook, Sigma+SPL detections, and identity/workflow examples live in [`templates/`](templates/) — adapt and test before deploying.
+- **Run it as a skill.** The guide is packaged as a portable [Agent Skill](skill/README.md) (`SKILL.md`, the standard Claude Code / Codex CLI / Cursor all read). Point your coding agent at it and it discovers your installed agents, scores your posture on the maturity model, and — with your confirmation — installs the matching controls.
 
 ## The guide
 
