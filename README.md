@@ -8,6 +8,20 @@ It is organized as an **LLM Wiki** (following [Andrej Karpathy's pattern](https:
 
 The full catalog is [`index.md`](index.md); term definitions are in [`glossary.md`](glossary.md); the structure and conventions are in [`CLAUDE.md`](CLAUDE.md); change history is in [`log.md`](log.md).
 
+## What this is — and what it isn't
+
+Security frameworks and risk catalogs — OWASP's Agentic and LLM Top 10s, NIST AI RMF, ISO 42001, the EU AI Act, and agent-specific frameworks like Pillar's SAIL — tell you **what** to worry about: the risks, the taxonomy, which standard each one maps to. They are the map, and you should use them.
+
+This guide is the **implementation companion** — the part that ships the control. Where a catalog row says *"discover shadow agents,"* *"enforce action-level authorization,"* or *"pre-build a kill switch,"* this hands you the working files:
+
+- a read-only [discovery scan](templates/discovery/inventory-agents.sh) for installed agents and the MCP servers they reach;
+- [managed-settings baselines](templates/claude-code/managed-settings.json) users can't loosen (Claude Code, Codex, Cursor) and a working [`PreToolUse` enforcement hook](templates/hooks/pretooluse-guard.sh);
+- agent behavioral-IOC [detections as Sigma + Splunk](templates/detections/);
+- [just-in-time, task-scoped identity grants](templates/identity/) and a credential-broker pattern;
+- a fail-safe [agent kill switch](templates/incident/agent-kill-switch.sh) and a [pre-publish review gate](templates/workflows/ai-security-review-gate.md) for agentic workflows.
+
+Use it **alongside** those frameworks, not instead of them: they catalog the risk, this closes it. The [five first controls](start-here.md) each ship a copy-ready artifact in [`templates/`](templates/); every part explains the *why* in prose and links the *how*.
+
 ## Use this guide
 
 - **Browse it as a site.** The wiki is published with GitHub Pages at **https://peleduri.github.io/Practical-Guide-to-Agentic-AI-Policies/** (also in the About panel).
