@@ -1,6 +1,6 @@
 ---
 title: "Start Here — How to Use This Wiki"
-summary: "The on-ramp: pick your reader track, do the first five controls in order, and place yourself on a crawl / walk / run maturity model before diving into the ten parts."
+summary: "The on-ramp: pick your reader track, do the first five controls in order, and place yourself on a crawl / walk / run maturity model before diving into the parts."
 updated: 2026-07-17
 ---
 
@@ -8,7 +8,7 @@ updated: 2026-07-17
 
 This is a security engineer's playbook for defending **agentic AI** — coding assistants (Claude Code, Codex, Cursor), autonomous desktop and personal assistants, workflow platforms, and enterprise Work AI — across laptops, remote/cloud development environments, and the new tier of GPU-first and sandbox-native compute.
 
-The guide is ten parts (see [`index.md`](index.md)). That is a lot to land on cold. This page exists so you don't read it front to back. Pick your track, do the first five controls, and find yourself on the maturity model.
+The guide is a set of cross-linked parts (see [`index.md`](index.md)). That is a lot to land on cold. This page exists so you don't read it front to back. Pick your track, do the first five controls, and find yourself on the maturity model.
 
 If you take one idea from the whole guide, take this: **an agent that *acts* is an endpoint and identity problem, not a chat-gateway problem.** Your model-egress gateway never sees the local file read, the tool call, or the credential the agent was talked into exfiltrating ([Part 1](wiki/part-1-risk-surface-and-control-model.md)).
 
@@ -45,8 +45,8 @@ Place your program honestly. Most organizations are at crawl and think they are 
 
 ## How this wiki is organized
 
-- [`index.md`](index.md) — the catalog: every part, one line each, plus where each key concept is defined.
-- `wiki/part-N-*.md` — the ten parts. Each is standalone and cross-linked; sources are cited at the foot of every page.
+- [`index.md`](index.md) — the catalog: every part, one line each, grouped into a reading arc (Foundations → deployment surfaces → operations and identity → the compute spectrum and its program → multi-agent), plus where each key concept is defined.
+- `wiki/part-N-*.md` — the parts. Each is standalone and cross-linked, so the part number is a stable identifier, not a required reading order; sources are cited at the foot of every page.
 - [`glossary.md`](glossary.md) — one place for the terms the parts use (discovery/enforcement, MCP broker, NHI, DSPM, delegation vs impersonation, and the rest).
 - [`CLAUDE.md`](CLAUDE.md) — the schema and conventions, so a human or an LLM can extend the wiki without breaking it.
 - [`log.md`](log.md) — append-only change history.
