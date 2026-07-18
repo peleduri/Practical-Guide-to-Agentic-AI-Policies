@@ -17,12 +17,12 @@ You don't have to read all 14 parts to start. Point your coding agent at this gu
 Two ways to run, both read-only:
 
 - **As an Agent Skill** (Claude Code / Codex CLI / Cursor) — the portable [`agentic-ai-hardening` skill](skill/README.md) runs the whole loop: discover → assess → report → (opt-in) harden.
-- **Just the discovery scan** — clone and run one bundled script:
+- **Or one command, locally** — clone and run `assess.sh`: it runs the read-only discovery scan and renders a starter scorecard, all local, nothing committed.
 
   ```bash
   git clone https://github.com/peleduri/Practical-Guide-to-Securing-AI-Agents
-  bash Practical-Guide-to-Securing-AI-Agents/templates/discovery/inventory-agents.sh
-  # read-only; emits JSON Lines you can roll up to your SIEM
+  cd Practical-Guide-to-Securing-AI-Agents
+  bash scripts/assess.sh        # read-only; writes a starter scorecard to ./.agent-assessment/
   ```
 
 **Share your result.** The scorecard prints a copy-ready maturity badge for your own README — e.g. ![agent security: walk](https://img.shields.io/badge/agent%20security-walk-c2410c) — so your posture links back here.
@@ -93,6 +93,7 @@ Security engineers, platform / developer-experience teams, and CISOs standing up
 - This is a general playbook; nothing here is specific to any one organization.
 - Every action-oriented part ends with a **security engineer's playbook** — a scannable "what to do" checklist. Governance (Part 12) also carries an engineer-facing "operationalize the governance" checklist alongside the CISO material.
 - The shell templates in [`templates/`](templates/) and the repo scripts are **`shellcheck`-clean** (warning level and above) — you are copying controls into your fleet, so they hold to the bar you would hold your own security tooling to. Still, read and adapt each one before deploying.
+- **Freshness.** Agent tooling changes fast, so CI guards against control-rot: on every push it `shellcheck`s every template and smoke-renders the scorecard, so a control that stops working fails the build rather than rotting silently.
 - Living document. See [`log.md`](log.md) for history.
 
 ## Roadmap

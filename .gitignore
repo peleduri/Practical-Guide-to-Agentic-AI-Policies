@@ -1,2 +1,5 @@
 # gstack browse/design local state
 .gstack/
+
+# local assessment output from scripts/assess.sh — reflects a real machine, never commit
+.agent-assessment/

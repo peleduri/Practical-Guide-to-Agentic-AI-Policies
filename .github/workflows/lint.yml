@@ -33,3 +33,31 @@ jobs:
           persist-credentials: false   # don't leave the token in .git/config
       - name: Lint links and orphans
         run: bash scripts/lint.sh
+
+  # Freshness guard against control-rot: agent tooling changes fast, so every push
+  # re-proves that the shipped controls still parse, stay shellcheck-clean, and that
+  # the scorecard renderer still works. A control that breaks fails the build instead
+  # of rotting silently in a repo people copy from.
+  controls:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the wiki
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Install shellcheck and jq
+        run: sudo apt-get update && sudo apt-get install -y shellcheck jq
+      - name: Shellcheck every template and script (warning+)
+        run: |
+          fail=0
+          while IFS= read -r f; do
+            shellcheck -S warning "$f" || fail=1
+          done < <(find templates skill scripts -name '*.sh' -type f)
+          exit "$fail"
+      - name: Scorecard renderer smoke test
+        run: |
+          out=$(bash skill/agentic-ai-hardening/scripts/scorecard.sh examples/posture.json)
+          printf '%s' "$out" | grep -q 'agent%20security-' || { echo "no maturity badge rendered"; exit 1; }
+          printf '%s' "$out" | grep -q 'Maturity:'        || { echo "no maturity rendered"; exit 1; }
+      - name: The two discovery copies must stay identical
+        run: cmp templates/discovery/inventory-agents.sh skill/agentic-ai-hardening/scripts/inventory-agents.sh
