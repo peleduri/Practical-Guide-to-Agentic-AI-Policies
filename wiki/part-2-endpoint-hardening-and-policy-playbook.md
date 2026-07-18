@@ -105,7 +105,7 @@ So the hook is layer 1 of a defense-in-depth design. The durable layers live on 
 
 - **Fail open.** If the hook cannot parse its input or a dependency is missing, it allows and logs, so a broken guardrail never bricks the developer. Hard enforcement is the server-side layer's job.
 - **Normalize before matching.** Collapse newlines and carriage returns in the command string before running your patterns, or a multi-line command slips past single-line rules.
-- **Prefer ask over block for prod-affecting actions.** Blocking everything trains people to work around you; asking keeps the human in the loop. Reserve the hard block for the genuinely unrecoverable.
+- **Prefer ask over block for prod-affecting actions.** Blocking everything trains people to work around you; asking keeps the human in the loop. Reserve the hard block for the genuinely unrecoverable. One caveat this gate depends on: "ask" assumes a human is present to answer. When an agent drives this coding agent headlessly (a CI job, an orchestrator, an ACP client with no console), no one resolves the prompt, and the usual shortcut is to disable the gate entirely with `--dangerously-skip-permissions`. In that mode the gate must instead resolve to a deny-by-default machine policy — see [Part 14, Failure Mode 5](part-14-multi-agent-a2a.md#failure-mode-5-ask-has-no-human-headless-agent-driving).
 
 ## Specific Controls for Claude Cowork (the Autonomous Desktop Agent)
 
