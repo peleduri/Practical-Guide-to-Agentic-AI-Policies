@@ -25,6 +25,8 @@ Two ways to run, both read-only:
   # read-only; emits JSON Lines you can roll up to your SIEM
   ```
 
+**Share your result.** The scorecard prints a copy-ready maturity badge for your own README — e.g. ![agent security: walk](https://img.shields.io/badge/agent%20security-walk-yellow) — so your posture links back here.
+
 The 14-part guide below is the **why** behind every control the assessment checks.
 
 ## What this is — and what it isn't
