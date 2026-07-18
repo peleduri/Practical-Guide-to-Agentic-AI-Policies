@@ -37,7 +37,7 @@ allow() { log ALLOW "${1:-}"; exit 0; }
 
 # --- 1. HARD BLOCK: destructive, unrecoverable commands ---
 case "$norm" in
-  *"rm -rf /"*|*"rm -rf /*"*|*"rm -rf ~"*|*"rm -rf \$HOME"*) block "recursive delete of / or \$HOME" ;;
+  *"rm -rf /"*|*"rm -rf ~"*|*"rm -rf \$HOME"*)              block "recursive delete of / or \$HOME" ;;  # "rm -rf /" already covers "rm -rf /*"
   *"dd if="*"of=/dev/"*)                                     block "raw disk write (dd to device)" ;;
   *mkfs*)                                                    block "filesystem format (mkfs)" ;;
   *":(){ :|:& };:"*)                                         block "fork bomb" ;;

@@ -71,6 +71,7 @@ Security engineers, platform / developer-experience teams, and CISOs standing up
 - Vendor and product names are **examples, not endorsements**. Agent controls change quickly — verify against the vendor docs cited on each page before relying on a specific setting.
 - This is a general playbook; nothing here is specific to any one organization.
 - Every action-oriented part ends with a **security engineer's playbook** — a scannable "what to do" checklist. Governance (Part 12) also carries an engineer-facing "operationalize the governance" checklist alongside the CISO material.
+- The shell templates in [`templates/`](templates/) and the repo scripts are **`shellcheck`-clean** (warning level and above) — you are copying controls into your fleet, so they hold to the bar you would hold your own security tooling to. Still, read and adapt each one before deploying.
 - Living document. See [`log.md`](log.md) for history.
 
 ## Roadmap

@@ -4,7 +4,7 @@
 # (a wiki/part-*.md not listed in index.md). Dependency-free; runs locally
 # or in CI (.github/workflows/lint.yml). Run from anywhere:  bash scripts/lint.sh
 set -uo pipefail
-cd "$(dirname "$0")/.."   # repo root, regardless of caller's cwd
+cd "$(dirname "$0")/.." || exit 1   # repo root, regardless of caller's cwd
 
 fail=0
 
