@@ -1,6 +1,6 @@
 # The guide as a skill
 
-`agentic-ai-hardening/` is the [Practical Guide to Agentic AI Policies](../README.md)
+`agentic-ai-hardening/` is the [Practical Guide to Securing AI Agents](../README.md)
 packaged as a runnable **[Agent Skill](https://agentskills.io)** — the portable
 `SKILL.md` standard that Claude Code, OpenAI Codex CLI, and Cursor all read natively
 (one file, no per-tool rewrite). It turns the guide from *read it yourself* into

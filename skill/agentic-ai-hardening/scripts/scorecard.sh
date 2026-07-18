@@ -92,9 +92,9 @@ cat <<HTML
   <ul>$rows</ul>
   <div class="next">Next control to implement: <b>$(esc "$next")</b></div>
   <footer>
-    Assessed with the Practical Guide to Agentic AI Policies · $(esc "$date")<br>
+    Assessed with the Practical Guide to Securing AI Agents · $(esc "$date")<br>
     $([ "$has_att" = "true" ] && printf 'A %s control was confirmed by the operator, not locally measured.<br>' '"self-reported"')Posture only — no machine inventory. Run it yourself:
-    <a href="https://github.com/peleduri/Practical-Guide-to-Agentic-AI-Policies">peleduri/Practical-Guide-to-Agentic-AI-Policies</a>
+    <a href="https://github.com/peleduri/Practical-Guide-to-Securing-AI-Agents">peleduri/Practical-Guide-to-Securing-AI-Agents</a>
   </footer>
 </div></body></html>
 HTML

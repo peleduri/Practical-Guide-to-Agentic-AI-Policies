@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agentic-AI Security Posture</title>
+<style>
+  :root{--ink:#14161a;--sub:#55606f;--rule:#e6e8e4;--card:#fff;--ground:#f4f5f3;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  *{box-sizing:border-box}body{margin:0;background:var(--ground);font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased}
+  .card{max-width:36rem;margin:2rem auto;background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:1.6rem 1.7rem;box-shadow:0 10px 30px -18px rgba(20,22,26,.35)}
+  .eyebrow{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sub);font-weight:600}
+  h1{font-size:1.28rem;margin:.25rem 0 1rem;letter-spacing:-.01em}
+  .badge{display:inline-block;font-family:var(--mono);font-weight:700;font-size:1.1rem;letter-spacing:.08em;color:#fff;background:#b8860b;padding:.35rem .8rem;border-radius:8px}
+  .scale{display:flex;gap:.4rem;margin:.8rem 0 1.1rem;font-family:var(--mono);font-size:.7rem;color:var(--sub)}
+  .seg{flex:1;text-align:center;padding:.28rem 0;border-radius:6px;border:1px solid var(--rule)}
+  .seg.on{color:#fff;background:#b8860b;border-color:#b8860b;font-weight:700}
+  ul{list-style:none;margin:0;padding:0}
+  li{display:flex;align-items:center;gap:.6rem;padding:.5rem 0;border-bottom:1px solid var(--rule);font-size:.94rem}
+  li:last-child{border-bottom:0}
+  .dot{width:.7rem;height:.7rem;border-radius:50%;flex:none}
+  .lbl{flex:1}.st{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.06em}
+  .att{display:inline-block;margin-left:.45rem;font-family:var(--mono);font-size:.58rem;color:var(--sub);text-transform:uppercase;letter-spacing:.07em;vertical-align:middle;border:1px solid var(--rule);border-radius:4px;padding:.04rem .3rem}
+  .next{margin:1.1rem 0 .3rem;padding:.7rem .9rem;background:var(--ground);border-radius:8px;font-size:.92rem}
+  .next b{color:#b8860b}
+  footer{margin-top:1.1rem;font-family:var(--mono);font-size:.72rem;color:var(--sub);line-height:1.5}
+  footer a{color:var(--sub)}
+</style></head>
+<body><div class="card">
+  <div class="eyebrow">Agentic-AI Security Posture</div>
+  <h1>Maturity: <span class="badge">WALK</span></h1>
+  <div class="scale">
+    <div class="seg ">crawl</div>
+    <div class="seg on">walk</div>
+    <div class="seg ">run</div>
+  </div>
+  <ul><li><span class="dot" style="background:#228b22"></span><span class="lbl">Discovery inventory (agents + MCP servers)</span><span class="st" style="color:#228b22">present</span></li><li><span class="dot" style="background:#b8860b"></span><span class="lbl">Managed hardening baseline (Part 2)</span><span class="st" style="color:#b8860b">partial</span></li><li><span class="dot" style="background:#228b22"></span><span class="lbl">Sanctioned-agent allowlist</span><span class="st" style="color:#228b22">present</span></li><li><span class="dot" style="background:#b8860b"></span><span class="lbl">MCP server allowlist</span><span class="st" style="color:#b8860b">partial</span></li><li><span class="dot" style="background:#b8860b"></span><span class="lbl">SIEM streaming of agent logs<span class="att">self-reported</span></span><span class="st" style="color:#b8860b">partial</span></li><li><span class="dot" style="background:#cc0000"></span><span class="lbl">Just-in-time, task-scoped identity</span><span class="st" style="color:#cc0000">missing</span></li><li><span class="dot" style="background:#cc0000"></span><span class="lbl">Headless permission gate</span><span class="st" style="color:#cc0000">missing</span></li><li><span class="dot" style="background:#228b22"></span><span class="lbl">Fail-safe agent kill switch</span><span class="st" style="color:#228b22">present</span></li></ul>
+  <div class="next">Next control to implement: <b>Headless permission gate</b></div>
+  <footer>
+    Assessed with the Practical Guide to Securing AI Agents · 2026-07-19<br>
+    A "self-reported" control was confirmed by the operator, not locally measured.<br>Posture only — no machine inventory. Run it yourself:
+    <a href="https://github.com/peleduri/Practical-Guide-to-Securing-AI-Agents">peleduri/Practical-Guide-to-Securing-AI-Agents</a>
+  </footer>
+</div></body></html>

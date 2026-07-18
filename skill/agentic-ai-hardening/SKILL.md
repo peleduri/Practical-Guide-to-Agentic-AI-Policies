@@ -2,7 +2,7 @@
 name: agentic-ai-hardening
 description: >-
   Assess and harden an organization's agentic-AI coding setup against the Practical
-  Guide to Agentic AI Policies. Discovers installed agents and the MCP servers they
+  Guide to Securing AI Agents. Discovers installed agents and the MCP servers they
   reach, scores posture on a crawl / walk / run maturity model, reports the gaps, and
   (only with explicit confirmation) installs copy-ready controls. Use when asked to
   "secure my AI agents", "assess agentic AI posture", "harden Claude Code / Codex /
@@ -12,14 +12,14 @@ license: CC-BY-4.0
 
 # Agentic-AI Hardening
 
-You are running the **Practical Guide to Agentic AI Policies** as an executable
+You are running the **Practical Guide to Securing AI Agents** as an executable
 assessment. Your job, in order: discover what agentic AI is installed, score the
 org's security posture against the guide's controls, report the gaps, and — only
 with explicit confirmation — install the matching controls. You are the guide,
 runnable.
 
 The guide is the source of truth. Its machine index is
-`https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/llms.txt`
+`https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Securing-AI-Agents/main/llms.txt`
 — read it if you need a control's rationale. Never invent a control; fetch the
 canonical, tested version from the URLs in the Control Catalog below.
 
@@ -48,7 +48,7 @@ canonical, tested version from the URLs in the Control Catalog below.
 Run the **bundled** discovery inventory. It is read-only: it enumerates installed agent
 CLIs / config dirs / editor extensions, the MCP servers each agent is wired to reach, any
 listening local-inference ports, and the **agent extension supply chain** — installed
-skills, custom commands, subagents, plugins, and hooks ([Part 6](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-6-extension-supply-chain.md)).
+skills, custom commands, subagents, plugins, and hooks ([Part 6](https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Securing-AI-Agents/main/wiki/part-6-extension-supply-chain.md)).
 It emits one JSON object per finding.
 
 - **Run the script that ships with this skill: `scripts/inventory-agents.sh`** (in this
@@ -135,7 +135,7 @@ allowlist → MCP+creds → SIEM/kill-switch → headless), which is also roughl
 order.
 
 Then place the org on the maturity model (definitions:
-`https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/start-here.md`):
+`https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Securing-AI-Agents/main/start-here.md`):
 
 - **Crawl** — discovery done, a managed baseline on the top agents, an MCP allowlist,
   agent events reaching the SIEM. You can see the surface.
@@ -205,7 +205,7 @@ Never apply a control the reader did not choose. Never skip the preview.
 
 ## Control Catalog (canonical, tested templates)
 
-Base: `https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/templates/`
+Base: `https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Securing-AI-Agents/main/templates/`
 
 | Control | Maturity | Guide | Template path (under base) |
 |---------|----------|-------|-----------------------------|
@@ -239,5 +239,5 @@ before installing it.
 
 ## Sources
 
-- The guide: https://github.com/peleduri/Practical-Guide-to-Agentic-AI-Policies
-- Machine index: https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/llms.txt
+- The guide: https://github.com/peleduri/Practical-Guide-to-Securing-AI-Agents
+- Machine index: https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Securing-AI-Agents/main/llms.txt

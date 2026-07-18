@@ -1,0 +1,15 @@
+{
+  "maturity": "walk",
+  "date": "2026-07-19",
+  "next_control": "Headless permission gate",
+  "controls": [
+    { "label": "Discovery inventory (agents + MCP servers)", "status": "present",  "attested": false },
+    { "label": "Managed hardening baseline (Part 2)",        "status": "partial",  "attested": false },
+    { "label": "Sanctioned-agent allowlist",                 "status": "present",  "attested": false },
+    { "label": "MCP server allowlist",                       "status": "partial",  "attested": false },
+    { "label": "SIEM streaming of agent logs",               "status": "partial",  "attested": true  },
+    { "label": "Just-in-time, task-scoped identity",         "status": "missing",  "attested": false },
+    { "label": "Headless permission gate",                   "status": "missing",  "attested": false },
+    { "label": "Fail-safe agent kill switch",                "status": "present",  "attested": false }
+  ]
+}

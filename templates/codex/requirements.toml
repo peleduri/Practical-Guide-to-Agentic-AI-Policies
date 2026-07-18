@@ -3,7 +3,7 @@
 # enum values against the current Codex docs before you rely on this — the vendor
 # surface changes. This mirrors the Claude Code managed-settings baseline in
 # ../claude-code/managed-settings.json: human-in-the-loop, sandboxed, admin-only hooks.
-# See Part 2: https://peleduri.github.io/Practical-Guide-to-Agentic-AI-Policies/wiki/part-2-endpoint-hardening-and-policy-playbook.html
+# See Part 2: https://peleduri.github.io/Practical-Guide-to-Securing-AI-Agents/wiki/part-2-endpoint-hardening-and-policy-playbook.html
 
 # Restrict which approval policies a user may select. Exclude any policy that
 # removes the human confirmation step. (Confirm the valid values in your Codex version.)

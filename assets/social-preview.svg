@@ -12,12 +12,12 @@
   <text x="88" y="132" fill="#7ee2a8" font-size="28" font-weight="700" letter-spacing="3">SECURITY PLAYBOOK · LLM WIKI</text>
   <!-- title -->
   <text x="86" y="236" fill="#ffffff" font-size="82" font-weight="800">Practical Guide to</text>
-  <text x="86" y="330" fill="#ffffff" font-size="82" font-weight="800">Agentic AI Policies</text>
+  <text x="86" y="330" fill="#ffffff" font-size="82" font-weight="800">Securing AI Agents</text>
   <!-- subtitle -->
   <text x="88" y="410" fill="#c6d2ee" font-size="33" font-weight="400">Defending AI coding agents across laptops, remote</text>
   <text x="88" y="454" fill="#c6d2ee" font-size="33" font-weight="400">workspaces, and GPU / sandbox clouds.</text>
   <!-- chips -->
   <text x="88" y="536" fill="#8aa0cc" font-size="27" font-weight="600">Claude Code · Cowork · Codex · Cursor · MCP · DSPM · NHI</text>
   <!-- footer -->
-  <text x="88" y="588" fill="#6b7ba6" font-size="24" font-weight="400">10 parts · CC BY 4.0 · github.com/peleduri/Practical-Guide-to-Agentic-AI-Policies</text>
+  <text x="88" y="588" fill="#6b7ba6" font-size="24" font-weight="400">14 parts · CC BY 4.0 · github.com/peleduri/Practical-Guide-to-Securing-AI-Agents</text>
 </svg>

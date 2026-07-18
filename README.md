@@ -1,12 +1,31 @@
-# Practical Guide to Agentic AI Policies
+# Practical Guide to Securing AI Agents
 
-[![lint](https://github.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/actions/workflows/lint.yml/badge.svg)](https://github.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/actions/workflows/lint.yml) [![docs: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-blue.svg)](LICENSE) [![code: MIT](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE-CODE)
+[![lint](https://github.com/peleduri/Practical-Guide-to-Securing-AI-Agents/actions/workflows/lint.yml/badge.svg)](https://github.com/peleduri/Practical-Guide-to-Securing-AI-Agents/actions/workflows/lint.yml) [![docs: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-blue.svg)](LICENSE) [![code: MIT](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE-CODE)
 
 **Defend AI coding agents — Claude Code, Cowork, Codex, Cursor — and the wider agentic stack across laptops, remote workspaces, and GPU/sandbox clouds.** Cross-referenced parts, from the risk model through endpoint hardening, detection, agent identity, and governance. For security engineers, platform / developer-experience teams, and CISOs. → **New here? [Start here](start-here.md).**
 
 It is organized as an **LLM Wiki** (following [Andrej Karpathy's pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)): a compounding, cross-referenced set of Markdown pages that both humans and LLMs can read, extend, and maintain.
 
 The full catalog is [`index.md`](index.md); term definitions are in [`glossary.md`](glossary.md); the structure and conventions are in [`CLAUDE.md`](CLAUDE.md); change history is in [`log.md`](log.md).
+
+## Run it — get your posture scorecard
+
+You don't have to read all 14 parts to start. Point your coding agent at this guide and **run the assessment**: it discovers the AI agents and MCP servers on a machine, scores your posture on a **crawl / walk / run** maturity model, and writes a shareable scorecard. Assess is **read-only**; hardening is opt-in and previewed before anything is written.
+
+**[→ See an example scorecard](https://peleduri.github.io/Practical-Guide-to-Securing-AI-Agents/examples/scorecard.html)** — synthetic data, but it's exactly what you get back.
+
+Two ways to run, both read-only:
+
+- **As an Agent Skill** (Claude Code / Codex CLI / Cursor) — the portable [`agentic-ai-hardening` skill](skill/README.md) runs the whole loop: discover → assess → report → (opt-in) harden.
+- **Just the discovery scan** — clone and run one bundled script:
+
+  ```bash
+  git clone https://github.com/peleduri/Practical-Guide-to-Securing-AI-Agents
+  bash Practical-Guide-to-Securing-AI-Agents/templates/discovery/inventory-agents.sh
+  # read-only; emits JSON Lines you can roll up to your SIEM
+  ```
+
+The 14-part guide below is the **why** behind every control the assessment checks.
 
 ## What this is — and what it isn't
 
@@ -24,8 +43,8 @@ Use it **alongside** those frameworks, not instead of them: they catalog the ris
 
 ## Use this guide
 
-- **Browse it as a site.** The wiki is published with GitHub Pages at **https://peleduri.github.io/Practical-Guide-to-Agentic-AI-Policies/** (also in the About panel).
-- **Point your agent at it.** This is an LLM Wiki, meant to be pulled by an agent as a policy source. Machine index: [`llms.txt`](llms.txt). Every page is plain Markdown at a stable raw URL, e.g. `https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Agentic-AI-Policies/main/wiki/part-2-endpoint-hardening-and-policy-playbook.md`.
+- **Browse it as a site.** The wiki is published with GitHub Pages at **https://peleduri.github.io/Practical-Guide-to-Securing-AI-Agents/** (also in the About panel).
+- **Point your agent at it.** This is an LLM Wiki, meant to be pulled by an agent as a policy source. Machine index: [`llms.txt`](llms.txt). Every page is plain Markdown at a stable raw URL, e.g. `https://raw.githubusercontent.com/peleduri/Practical-Guide-to-Securing-AI-Agents/main/wiki/part-2-endpoint-hardening-and-policy-playbook.md`.
 - **Lift the controls.** Copy-ready configs, a working PreToolUse hook, Sigma+SPL detections, and identity/workflow examples live in [`templates/`](templates/) — adapt and test before deploying.
 - **Run it as a skill.** The guide is packaged as a portable [Agent Skill](skill/README.md) (`SKILL.md`, the standard Claude Code / Codex CLI / Cursor all read). Point your coding agent at it and it discovers your installed agents, scores your posture on the maturity model, and — with your confirmation — installs the matching controls.
 
