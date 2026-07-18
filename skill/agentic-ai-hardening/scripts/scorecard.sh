@@ -36,10 +36,17 @@ date="$(printf '%s' "$json" | jq -r '.date // "—"')"
 has_att="$(printf '%s' "$json" | jq -r 'any(.controls[]?; .attested == true) // false')"
 
 case "$maturity" in
-  crawl) mcol="#cc0000"; mlabel="CRAWL"; mpos="0" ;;
-  walk)  mcol="#b8860b"; mlabel="WALK";  mpos="1" ;;
-  run)   mcol="#228b22"; mlabel="RUN";   mpos="2" ;;
+  crawl) mcol="#cc0000"; mlabel="CRAWL"; mpos="0"; mshield="red" ;;
+  walk)  mcol="#b8860b"; mlabel="WALK";  mpos="1"; mshield="yellow" ;;
+  run)   mcol="#228b22"; mlabel="RUN";   mpos="2"; mshield="brightgreen" ;;
 esac
+
+# Shareable maturity badge (the copy-back loop). Text-only in the card so it stays
+# self-contained and offline; the shields.io image only loads when someone pastes
+# this into their own README — which is the point, that README then links back here.
+repo_url="https://github.com/peleduri/Practical-Guide-to-Securing-AI-Agents"
+badge_img="https://img.shields.io/badge/agent%20security-${maturity}-${mshield}"
+badge_md="[![agent security: ${maturity}](${badge_img})](${repo_url})"
 
 # HTML-escape helper for label/next text (defense against odd characters in labels).
 esc() { printf '%s' "$1" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g'; }
@@ -80,6 +87,8 @@ cat <<HTML
   .next b{color:$mcol}
   footer{margin-top:1.1rem;font-family:var(--mono);font-size:.72rem;color:var(--sub);line-height:1.5}
   footer a{color:var(--sub)}
+  .share{margin-top:.9rem;padding:.6rem .8rem;background:var(--ground);border-radius:8px;font-family:var(--mono);font-size:.68rem;color:var(--sub)}
+  .share code{display:block;margin-top:.35rem;padding:.4rem .5rem;background:var(--card);border:1px solid var(--rule);border-radius:6px;word-break:break-all;color:var(--ink);white-space:pre-wrap}
 </style></head>
 <body><div class="card">
   <div class="eyebrow">Agentic-AI Security Posture</div>
@@ -91,10 +100,15 @@ cat <<HTML
   </div>
   <ul>$rows</ul>
   <div class="next">Next control to implement: <b>$(esc "$next")</b></div>
+  <div class="share">Share your result — add this badge to your README:<code>$(esc "$badge_md")</code></div>
   <footer>
     Assessed with the Practical Guide to Securing AI Agents · $(esc "$date")<br>
     $([ "$has_att" = "true" ] && printf 'A %s control was confirmed by the operator, not locally measured.<br>' '"self-reported"')Posture only — no machine inventory. Run it yourself:
-    <a href="https://github.com/peleduri/Practical-Guide-to-Securing-AI-Agents">peleduri/Practical-Guide-to-Securing-AI-Agents</a>
+    <a href="$repo_url">peleduri/Practical-Guide-to-Securing-AI-Agents</a>
   </footer>
 </div></body></html>
 HTML
+
+# Also print the copy-ready badge to stderr, so a CLI user who redirected the HTML
+# to a file still gets the snippet to paste into their README.
+printf 'Share badge (add to your README):\n%s\n' "$badge_md" >&2

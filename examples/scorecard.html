@@ -21,6 +21,8 @@
   .next b{color:#b8860b}
   footer{margin-top:1.1rem;font-family:var(--mono);font-size:.72rem;color:var(--sub);line-height:1.5}
   footer a{color:var(--sub)}
+  .share{margin-top:.9rem;padding:.6rem .8rem;background:var(--ground);border-radius:8px;font-family:var(--mono);font-size:.68rem;color:var(--sub)}
+  .share code{display:block;margin-top:.35rem;padding:.4rem .5rem;background:var(--card);border:1px solid var(--rule);border-radius:6px;word-break:break-all;color:var(--ink);white-space:pre-wrap}
 </style></head>
 <body><div class="card">
   <div class="eyebrow">Agentic-AI Security Posture</div>
@@ -32,6 +34,7 @@
   </div>
   <ul><li><span class="dot" style="background:#228b22"></span><span class="lbl">Discovery inventory (agents + MCP servers)</span><span class="st" style="color:#228b22">present</span></li><li><span class="dot" style="background:#b8860b"></span><span class="lbl">Managed hardening baseline (Part 2)</span><span class="st" style="color:#b8860b">partial</span></li><li><span class="dot" style="background:#228b22"></span><span class="lbl">Sanctioned-agent allowlist</span><span class="st" style="color:#228b22">present</span></li><li><span class="dot" style="background:#b8860b"></span><span class="lbl">MCP server allowlist</span><span class="st" style="color:#b8860b">partial</span></li><li><span class="dot" style="background:#b8860b"></span><span class="lbl">SIEM streaming of agent logs<span class="att">self-reported</span></span><span class="st" style="color:#b8860b">partial</span></li><li><span class="dot" style="background:#cc0000"></span><span class="lbl">Just-in-time, task-scoped identity</span><span class="st" style="color:#cc0000">missing</span></li><li><span class="dot" style="background:#cc0000"></span><span class="lbl">Headless permission gate</span><span class="st" style="color:#cc0000">missing</span></li><li><span class="dot" style="background:#228b22"></span><span class="lbl">Fail-safe agent kill switch</span><span class="st" style="color:#228b22">present</span></li></ul>
   <div class="next">Next control to implement: <b>Headless permission gate</b></div>
+  <div class="share">Share your result — add this badge to your README:<code>[![agent security: walk](https://img.shields.io/badge/agent%20security-walk-yellow)](https://github.com/peleduri/Practical-Guide-to-Securing-AI-Agents)</code></div>
   <footer>
     Assessed with the Practical Guide to Securing AI Agents · 2026-07-19<br>
     A "self-reported" control was confirmed by the operator, not locally measured.<br>Posture only — no machine inventory. Run it yourself:
